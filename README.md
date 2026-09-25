@@ -5,7 +5,7 @@ As robot learning leans more and more toward scaling, it can seem like there is 
 It collects research on humanoid robots playing **table tennis, tennis, badminton, soccer and basketball**, plus a map of which groups work on which sport.
 
 <!-- gen:stats -->
-**41** works · **32** groups · **27** institutions
+**40** works · **31** groups · **26** institutions
 <!-- /gen -->
 
 Each entry lists when it first appeared, where it was published (📣 = public demo, no paper yet), which robot it uses, whether it was shown on real hardware (✅ real robot, 🖥️ simulation only), and links to its project page and code.
@@ -24,42 +24,9 @@ Each entry lists when it first appeared, where it was published (📣 = public d
 
 ## 🌍 Who's Working on What
 
-Click a marker to see an institution's groups (named by each paper's last author), the sports they work on, and their papers.
+[![Map of groups working on humanoid ball sports](site/preview.png)](https://suz-tsinghua.github.io/awesome-humanoid-ball-sports/)
 
-<!-- gen:map -->
-```geojson
-{"type": "FeatureCollection", "features": [
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-118.1253, 34.1377]}, "properties": {"Institution": "Caltech", "Sports": "🎾 Tennis", "AMBER Lab — Aaron D. Ames": "TaskNPoint (2026.06)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.9428, 40.4439]}, "properties": {"Institution": "Carnegie Mellon University", "Sports": "⚽ Soccer", "Safe AI Lab — Ding Zhao": "Banana Kick (2026.09) · Robotic Penalty Kicks (2026.09)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-76.4735, 42.4534]}, "properties": {"Institution": "Cornell University", "Sports": "⚽ Soccer", "Qi Wu": "Dribble Master (2025.05)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [116.314, 39.9835]}, "properties": {"Institution": "DeepCybo", "Sports": "🎾 Tennis · 🏸 Badminton", "Kai Chen": "CyboRacket (2026.03)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.5477, 47.3763]}, "properties": {"Institution": "ETH Zurich", "Sports": "🏸 Badminton", "Robotic Systems Lab — Marco Hutter": "Humanoid badminton (teaser) (2026.09)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.126, 51.5333]}, "properties": {"Institution": "Google DeepMind", "Sports": "⚽ Soccer", "Nicolas Heess": "Agile Soccer Skills (OP3) (2023.04) · Soccer from Egocentric Vision (2024.05)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [114.1371, 22.283]}, "properties": {"Institution": "HKU", "Sports": "🏓 Table Tennis · 🏸 Badminton · ⚽ Soccer", "ArcLab — Peng Lu": "STOFT (2025.10) · LHBS (2026.02)", "MMLab — Ping Luo": "SMASH (2026.04) · SMASH 2.0 (2026.09)", "OpenDriveLab — Hongyang Li": "RoboNaldo (2026.06)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [114.2655, 22.3364]}, "properties": {"Institution": "HKUST", "Sports": "⚽ Soccer · 🏀 Basketball", "Ping Tan": "HumanX (2026.02)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-71.0942, 42.3601]}, "properties": {"Institution": "MIT", "Sports": "⚽ Soccer", "Improbable AI Lab — Pulkit Agrawal": "Joga (2026.09)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [116.298, 39.959]}, "properties": {"Institution": "Noetix Robotics", "Sports": "⚽ Soccer", "Xiaoyu Tian": "SkillX (2026.09)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [116.4074, 39.9042]}, "properties": {"Institution": "Phybot", "Sports": "🏸 Badminton", "Xiaoyu Ren": "Humanoid Whole-Body Badminton (2025.11)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-86.9212, 40.4237]}, "properties": {"Institution": "Purdue University", "Sports": "🏓 Table Tennis", "TRACE Lab — Yan Gu": "PACE (2025.09)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [12.5144, 41.9031]}, "properties": {"Institution": "Sapienza University of Rome", "Sports": "⚽ Soccer", "Lab RoCoCo — Daniele Nardi": "Multi Robot Coordination (2025.09)", "Lab RoCoCo — Luca Iocchi": "Vision-Based Dribbling (2026.07)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [121.46, 31.179]}, "properties": {"Institution": "Shanghai AI Lab", "Sports": "🎾 Tennis · ⚽ Soccer", "Jiangmiao Pang": "Humanoid Goalkeeper (2025.10) · AdaPT (2026.08)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [121.4337, 31.0252]}, "properties": {"Institution": "Shanghai Jiao Tong University", "Sports": "⚽ Soccer", "Yue Gao": "HierKick (2026.03)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.928, 40.46]}, "properties": {"Institution": "Skild AI", "Sports": "⚽ Soccer", "—": "Physical Self-Play (2026.09)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [121.437, 31.188]}, "properties": {"Institution": "TeleAI", "Sports": "⚽ Soccer", "Xuelong Li": "Learning Soccer Skills for Humanoid Robots (2026.02)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [116.321, 40.0023]}, "properties": {"Institution": "Tsinghua University", "Sports": "🎾 Tennis · ⚽ Soccer", "Li Yi": "LATENT (2026.03)", "Mingguo Zhao": "Vision-Driven Reactive Soccer (2025.11)", "Yiming Li": "DAVIS (2026.09)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.2585, 37.8719]}, "properties": {"Institution": "UC Berkeley", "Sports": "🏓 Table Tennis", "S. Shankar Sastry": "HITTER (2025.08)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-118.4469, 34.0709]}, "properties": {"Institution": "UCLA", "Sports": "⚽ Soccer", "RoMeLa — Dennis W. Hong": "MPC with Visibility Graphs (2025.04) · Model-Based Humanoid Soccer (2025.12)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-72.5284, 42.3893]}, "properties": {"Institution": "UMass Amherst", "Sports": "⚽ Soccer", "Donghyun Kim": "Biomechanics-Inspired Kicking (2024.07)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-118.2859, 34.0219]}, "properties": {"Institution": "USC", "Sports": "⚽ Soccer", "DRCL — Quan Nguyen": "Preferenced Oracle Guided Policies (2024.10)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-97.7339, 30.2851]}, "properties": {"Institution": "UT Austin", "Sports": "⚽ Soccer", "LARG — Peter Stone": "Agile Striker Skills (2025.12)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-89.4125, 43.0766]}, "properties": {"Institution": "UW–Madison", "Sports": "⚽ Soccer", "Josiah P. Hanna": "RL Within the Classical Stack (2024.12) · Multi-Robot Collaboration (2025.03)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-8.6598, 40.632]}, "properties": {"Institution": "University of Aveiro", "Sports": "⚽ Soccer", "IEETA — Nuno Lau": "Skill-Set-Primitives for RoboCup (2023.12)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.1024, 50.7339]}, "properties": {"Institution": "University of Bonn", "Sports": "⚽ Soccer", "Autonomous Intelligent Systems — Sven Behnke": "NimbRo (RoboCup 2023 winner) (2024.01) · Maximum Impulse Kicking (2024.12)"}},
-{"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.9847, 53.5667]}, "properties": {"Institution": "University of Hamburg", "Sports": "⚽ Soccer", "TAMS — Jianwei Zhang": "SoccerDiffusion (2025.04)"}}
-]}
-```
-<!-- /gen -->
-
+**[Open the interactive map →](https://suz-tsinghua.github.io/awesome-humanoid-ball-sports/)** Filter by sport, click a cluster to zoom in, and click a logo to see each group's papers. Groups are named by each paper's last author.
 
 ## 🏓 Table Tennis
 
@@ -105,7 +72,6 @@ Click a marker to see an institution's groups (named by each paper's last author
 | 2024.01 | [RoboCup 2023 Humanoid AdultSize Winner NimbRo: NimbRoNet3 Visual Perception and Responsive Gait with Waveform In-walk Kicks](https://arxiv.org/abs/2401.05909) | RoboCup 2023 Symposium | NimbRo-OP2X | ✅ | Sven Behnke, University of Bonn | — |
 | 2024.05 | [Learning Robot Soccer from Egocentric Vision with Deep Reinforcement Learning](https://arxiv.org/abs/2405.02425) | CoRL 2024 | Robotis OP3 | ✅ | Nicolas Heess, Google DeepMind | [project](https://sites.google.com/view/vision-soccer) |
 | 2024.07 | [A Biomechanics-Inspired Approach to Soccer Kicking for Humanoid Robots](https://arxiv.org/abs/2407.14612) | arXiv | PresToe | 🖥️ | Donghyun Kim, UMass Amherst | — |
-| 2024.10 | [Preferenced Oracle Guided Multi-mode Policies for Dynamic Bipedal Loco-Manipulation](https://arxiv.org/abs/2410.01030) | arXiv | HECTOR, Berkeley Humanoid, Unitree G1/H1 | 🖥️ | Quan Nguyen, USC | — |
 | 2024.12 | [Maximum Impulse Approach to Soccer Kicking for Humanoid Robots](https://arxiv.org/abs/2412.01480) | arXiv | NimbRo-OP2X | ✅ | Sven Behnke, University of Bonn | — |
 | 2024.12 | [Reinforcement Learning Within the Classical Robotics Stack: A Case Study in Robot Soccer](https://arxiv.org/abs/2412.09417) | ICRA 2025 | NAO | ✅ | Josiah P. Hanna, UW–Madison | — |
 | 2025.03 | [Multi-Robot Collaboration through Reinforcement Learning and Abstract Simulation](https://arxiv.org/abs/2503.05092) | ICRA 2025 | NAO | ✅ | Josiah P. Hanna, UW–Madison | — |

@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Humanoid Ball Sports Map</title>
+<meta name="description" content="Which labs work on humanoid robots playing table tennis, tennis, badminton, soccer and basketball.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏓</text></svg>">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
+<style>
+  :root {
+    --bg: #d0cfd4;
+    --card: rgba(255, 255, 255, 0.94);
+    --text: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --chip: #f1f5f9;
+    --chip-hover: #e2e8f0;
+    --accent: #ea580c;
+    --accent-text: #ffffff;
+    --accent-soft: rgba(234, 88, 12, 0.14);
+    --ok: #16a34a;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.14), 0 2px 6px rgba(15, 23, 42, 0.08);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #232227;
+      --card: rgba(17, 24, 39, 0.94);
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --line: #273244;
+      --chip: #1e293b;
+      --chip-hover: #273449;
+      --accent: #fb923c;
+      --accent-text: #1a0d05;
+      --accent-soft: rgba(251, 146, 60, 0.18);
+      --ok: #4ade80;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3);
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font: 14px/1.45 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  #map { position: fixed; inset: 0; background: var(--bg); }
+  .leaflet-container { font: inherit; background: var(--bg); }
+
+  .card {
+    position: fixed;
+    z-index: 1000;
+    background: var(--card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+  }
+
+  /* Header */
+  .head { top: 16px; left: 16px; width: 370px; padding: 16px 16px 14px; }
+  .head h1 { margin: 0; font-size: 18px; letter-spacing: -0.01em; }
+  .head .sub { margin: 2px 0 10px; color: var(--muted); }
+  .stats { display: flex; gap: 14px; margin-bottom: 12px; }
+  .stat b { display: block; font-size: 18px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .stat span { color: var(--muted); font-size: 12px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    border: 1px solid transparent; border-radius: 999px;
+    padding: 5px 10px; background: var(--chip); color: var(--text);
+    font: inherit; font-size: 13px; cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .chip:hover { background: var(--chip-hover); }
+  .chip[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); }
+  .chip .n { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .chip:focus-visible, .close:focus-visible, .links a:focus-visible, .show-all:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .foot { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+  .foot a { color: var(--accent); font-weight: 600; text-decoration: none; white-space: nowrap; }
+  .foot a:hover { text-decoration: underline; }
+
+  /* Markers */
+  .inst-icon { background: none; border: 0; }
+  .pin { position: relative; width: 44px; height: 44px; transition: transform 0.15s; }
+  .pin:hover { transform: scale(1.08); }
+  .pin .logo { width: 44px; height: 44px; border-width: 2px; box-shadow: 0 3px 10px rgba(15, 23, 42, 0.28); }
+  .pin.active .logo { border-color: var(--accent); box-shadow: 0 0 0 5px var(--accent-soft), 0 3px 10px rgba(15, 23, 42, 0.28); }
+  .pin .count {
+    position: absolute; top: -5px; right: -7px;
+    min-width: 20px; height: 20px; padding: 0 5px; border-radius: 10px;
+    background: var(--accent); color: var(--accent-text); border: 2px solid var(--card);
+    font-size: 11px; font-weight: 700; line-height: 16px; text-align: center; font-variant-numeric: tabular-nums;
+  }
+  .logo {
+    display: grid; place-items: center; overflow: hidden; flex: none;
+    border-radius: 50%; background: #fff; border: 1px solid var(--line);
+  }
+  .leaflet-container .logo img, .logo img { width: 72%; height: 72%; object-fit: contain; }
+  .logo .mono { color: #334155; font-weight: 800; font-size: 13px; letter-spacing: -0.02em; }
+
+  .cluster-icon { background: none; border: 0; }
+  .cluster {
+    width: 48px; height: 48px; border-radius: 50%;
+    display: grid; place-items: center;
+    background: var(--accent); color: var(--accent-text);
+    font-weight: 800; font-size: 16px; font-variant-numeric: tabular-nums;
+    box-shadow: 0 0 0 7px var(--accent-soft), 0 4px 12px rgba(15, 23, 42, 0.3);
+    cursor: zoom-in; transition: transform 0.15s;
+  }
+  .cluster:hover { transform: scale(1.08); }
+
+  .leaflet-tooltip.tip {
+    background: var(--card); color: var(--text); border: 1px solid var(--line);
+    border-radius: 8px; box-shadow: var(--shadow); padding: 4px 8px; font-weight: 600;
+  }
+  .leaflet-tooltip.tip::before { display: none; }
+
+  /* Detail panel */
+  .panel {
+    top: 16px; right: 16px; bottom: 16px; width: 420px;
+    display: flex; flex-direction: column; overflow: hidden;
+    transform: translateX(calc(100% + 32px)); transition: transform 0.25s ease;
+  }
+  .panel.open { transform: none; }
+  .panel-head { display: flex; align-items: center; gap: 14px; padding: 18px 18px 14px; border-bottom: 1px solid var(--line); }
+  .panel-head .logo { width: 56px; height: 56px; }
+  .panel-head .logo .mono { font-size: 17px; }
+  .panel-head h2 { margin: 0; font-size: 19px; line-height: 1.2; letter-spacing: -0.01em; }
+  .panel-head .sports { margin-top: 4px; display: flex; flex-wrap: wrap; gap: 4px; }
+  .tag { display: inline-flex; align-items: center; gap: 4px; padding: 1px 8px; border-radius: 999px; background: var(--chip); font-size: 12px; color: var(--muted); }
+  .close {
+    margin-left: auto; align-self: flex-start; flex: none;
+    width: 32px; height: 32px; border-radius: 50%; border: 0;
+    background: var(--chip); color: var(--text); font-size: 18px; line-height: 1; cursor: pointer;
+  }
+  .close:hover { background: var(--chip-hover); }
+  .panel-body { overflow-y: auto; padding: 6px 18px 18px; }
+  .note { margin: 10px 0 0; padding: 8px 10px; border-radius: 10px; background: var(--accent-soft); font-size: 13px; }
+  .show-all { border: 0; background: none; color: var(--accent); font: inherit; font-weight: 600; cursor: pointer; padding: 0; }
+  .group { padding-top: 16px; }
+  .group + .group { border-top: 1px dashed var(--line); margin-top: 14px; }
+  .group-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 8px; margin-bottom: 8px; }
+  .pi { font-size: 15px; font-weight: 700; }
+  .lab { color: var(--muted); font-size: 13px; text-decoration: none; }
+  a.lab:hover { color: var(--accent); }
+  .role { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .works { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .work { padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: color-mix(in srgb, var(--card) 70%, transparent); }
+  .work-top { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; }
+  .work-top .emoji { font-size: 15px; }
+  .date { font-variant-numeric: tabular-nums; }
+  .venue { margin-left: auto; padding: 1px 8px; border-radius: 999px; background: var(--chip); color: var(--text); font-weight: 600; white-space: nowrap; }
+  .venue.announced { background: var(--accent-soft); }
+  .work-title { display: block; margin-top: 6px; font-size: 15px; font-weight: 700; line-height: 1.3; text-decoration: none; }
+  .work-title:hover { color: var(--accent); }
+  .work-full { margin-top: 2px; color: var(--muted); font-size: 13px; }
+  .work-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; font-size: 12px; color: var(--muted); }
+  .work-meta .real::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--ok); margin-right: 5px; vertical-align: 1px; }
+  .work-meta .sim::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid var(--muted); margin-right: 5px; vertical-align: 0; }
+  .links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .links a, .links span {
+    padding: 3px 10px; border-radius: 8px; border: 1px solid var(--line);
+    font-size: 12px; font-weight: 600; text-decoration: none;
+  }
+  .links a:hover { border-color: var(--accent); color: var(--accent); }
+  .links span { color: var(--muted); border-style: dashed; font-weight: 500; }
+
+  .leaflet-control-attribution { background: var(--card) !important; color: var(--muted) !important; border-radius: 8px 0 0 0; }
+  .leaflet-control-attribution a { color: var(--muted) !important; }
+  .leaflet-bar a { background: var(--card); color: var(--text); border-color: var(--line); }
+  .leaflet-bar a:hover { background: var(--chip); }
+
+  @media (max-width: 760px) {
+    .head { top: 8px; left: 8px; right: 8px; width: auto; padding: 12px; }
+    .head .sub, .stats, .foot span { display: none; }
+    .head h1 { font-size: 16px; margin-bottom: 8px; }
+    .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -12px; padding: 0 12px; }
+    .chip { flex: none; }
+    .foot { margin-top: 8px; padding-top: 8px; }
+    .panel { top: auto; left: 8px; right: 8px; bottom: 8px; width: auto; max-height: 62vh; transform: translateY(calc(100% + 16px)); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .panel, .pin, .cluster, .chip { transition: none; }
+  }
+</style>
+</head>
+<body>
+<div id="map" role="application" aria-label="Map of groups working on humanoid ball sports"></div>
+
+<header class="card head">
+  <h1>Humanoid Ball Sports</h1>
+  <p class="sub">Who's working on what</p>
+  <div class="stats" id="stats"></div>
+  <div class="chips" id="chips" role="toolbar" aria-label="Filter by sport"></div>
+  <div class="foot">
+    <span>Groups are named by each paper's last author.</span>
+    <a href="https://github.com/SUZ-tsinghua/awesome-humanoid-ball-sports">Full paper list ↗</a>
+  </div>
+</header>
+
+<aside class="card panel" id="panel" aria-live="polite" aria-hidden="true"></aside>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
+<script src="data.js"></script>
+<script>
+const { sports: SPORTS, institutions: INSTITUTIONS } = window.MAP_DATA;
+let activeSport = null;
+let activeInst = null;
+
+function h(tag, props = {}, ...kids) {
+  const el = document.createElement(tag);
+  for (const [key, value] of Object.entries(props)) {
+    if (value == null || value === false) continue;
+    if (key === "class") el.className = value;
+    else if (key.startsWith("on")) el.addEventListener(key.slice(2), value);
+    else el.setAttribute(key, value === true ? "" : value);
+  }
+  for (const kid of kids.flat()) {
+    if (kid == null || kid === false) continue;
+    el.append(kid instanceof Node ? kid : document.createTextNode(kid));
+  }
+  return el;
+}
+
+const allWorks = inst => inst.groups.flatMap(g => g.works);
+const matches = work => !activeSport || work.sports.includes(activeSport);
+const sportsOf = inst => Object.keys(SPORTS).filter(s => allWorks(inst).some(w => w.sports.includes(s)));
+
+function monogram(name) {
+  if (name.length <= 5 && !name.includes(" ")) return name;
+  const words = name.split(/\s+/).filter(w => !/^(of|the|at|and)$/i.test(w));
+  return words.slice(0, 2).map(w => w[0]).join("").toUpperCase();
+}
+
+function logo(inst, cls = "") {
+  const box = h("div", { class: `logo ${cls}` });
+  const fallback = () => box.replaceChildren(h("span", { class: "mono" }, monogram(inst.name)));
+  if (inst.logo) {
+    const img = h("img", { src: inst.logo, alt: "" });
+    img.addEventListener("error", fallback);
+    box.append(img);
+  } else {
+    fallback();
+  }
+  return box;
+}
+
+// ---------------------------------------------------------------- map
+const map = L.map("map", {
+  zoomControl: false,
+  worldCopyJump: true,
+  minZoom: 2,
+  maxBounds: [[-60, -400], [84, 400]],
+  maxBoundsViscosity: 1,
+});
+L.control.zoom({ position: "bottomleft" }).addTo(map);
+
+const dark = window.matchMedia("(prefers-color-scheme: dark)");
+let tiles;
+function setTiles() {
+  if (tiles) tiles.remove();
+  const style = dark.matches ? "World_Dark_Gray_Base" : "World_Light_Gray_Base";
+  tiles = L.tileLayer(`https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/${style}/MapServer/tile/{z}/{y}/{x}`, {
+    maxNativeZoom: 16, maxZoom: 18, attribution: "Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ",
+  }).addTo(map);
+}
+setTiles();
+dark.addEventListener("change", setTiles);
+
+const clusters = L.markerClusterGroup({
+  showCoverageOnHover: false,
+  spiderfyOnMaxZoom: true,
+  zoomToBoundsOnClick: true,
+  maxClusterRadius: 50,
+  iconCreateFunction: cluster => L.divIcon({
+    html: h("div", { class: "cluster" }, String(cluster.getChildCount())),
+    className: "cluster-icon",
+    iconSize: [48, 48],
+  }),
+});
+clusters.on("clustermouseover", e => {
+  const names = e.layer.getAllChildMarkers().map(m => m.options.inst.name).sort();
+  const text = names.length > 4 ? `${names.slice(0, 4).join(", ")} +${names.length - 4} more` : names.join(", ");
+  e.layer.bindTooltip(`${text} — click to zoom in`, { className: "tip", direction: "top", offset: [0, -24] }).openTooltip();
+});
+map.addLayer(clusters);
+
+const markers = INSTITUTIONS.map(inst => {
+  const marker = L.marker([inst.lat, inst.lon], { inst, keyboard: true, riseOnHover: true });
+  marker.bindTooltip(inst.name, { className: "tip", direction: "top", offset: [0, -26] });
+  marker.on("click", () => openPanel(inst, marker));
+  marker.on("add", () => labelMarker(marker));
+  return marker;
+});
+
+function labelMarker(marker) {
+  marker.getElement()?.setAttribute("aria-label", marker.options.inst.name);
+}
+
+const wide = () => window.innerWidth > 760;
+// Keep markers clear of the header card and the detail panel.
+const padding = () => wide()
+  ? { paddingTopLeft: [410, 40], paddingBottomRight: [activeInst ? 470 : 40, 40] }
+  : { paddingTopLeft: [20, 130], paddingBottomRight: [20, activeInst ? window.innerHeight * 0.62 + 60 : 20] };
+
+function pinIcon(inst) {
+  const n = allWorks(inst).filter(matches).length;
+  const pin = h("div", { class: `pin${inst === activeInst ? " active" : ""}` }, logo(inst), h("span", { class: "count" }, String(n)));
+  return L.divIcon({ html: pin, className: "inst-icon", iconSize: [44, 44], iconAnchor: [22, 22], tooltipAnchor: [0, 0] });
+}
+
+function updateIcons() {
+  for (const m of markers) {
+    m.setIcon(pinIcon(m.options.inst));
+    labelMarker(m);
+  }
+}
+
+function refreshMarkers({ fit = false } = {}) {
+  const visible = markers.filter(m => allWorks(m.options.inst).some(matches));
+  updateIcons();
+  clusters.clearLayers();
+  clusters.addLayers(visible);
+  if (fit && visible.length) {
+    map.flyToBounds(L.latLngBounds(visible.map(m => m.getLatLng())), { ...padding(), maxZoom: 5, duration: 0.8 });
+  }
+}
+
+// ---------------------------------------------------------------- header
+function renderStats() {
+  const groups = INSTITUTIONS.reduce((n, i) => n + i.groups.length, 0);
+  const works = new Set(INSTITUTIONS.flatMap(allWorks).map(w => w.paper)).size;
+  const stat = (n, label) => h("div", { class: "stat" }, h("b", {}, String(n)), h("span", {}, label));
+  document.getElementById("stats").replaceChildren(
+    stat(INSTITUTIONS.length, "institutions"), stat(groups, "groups"), stat(works, "works"),
+  );
+}
+
+function renderChips() {
+  const works = [...new Map(INSTITUTIONS.flatMap(allWorks).map(w => [w.paper, w])).values()];
+  const chip = (key, label, n) => h("button", {
+    class: "chip", type: "button", "aria-pressed": String(activeSport === key),
+    onclick: () => { activeSport = key; renderChips(); refreshMarkers({ fit: true }); if (activeInst) renderPanel(); },
+  }, label, h("span", { class: "n" }, String(n)));
+  document.getElementById("chips").replaceChildren(
+    chip(null, "All", works.length),
+    ...Object.entries(SPORTS).map(([key, s]) => chip(key, `${s.emoji} ${s.name}`, works.filter(w => w.sports.includes(key)).length)),
+  );
+}
+
+// ---------------------------------------------------------------- panel
+const panel = document.getElementById("panel");
+
+function workCard(work) {
+  let rest = work.title;
+  if (rest.startsWith(`${work.short}:`)) rest = rest.slice(work.short.length + 1).trim();
+  else if (rest === work.short) rest = null;
+  const links = [h("a", { href: work.paper, target: "_blank", rel: "noopener" }, work.announced ? "Announcement" : "Paper")];
+  if (work.project) links.push(h("a", { href: work.project, target: "_blank", rel: "noopener" }, "Project"));
+  if (work.code === "soon") links.push(h("span", {}, "Code soon"));
+  else if (work.code) links.push(h("a", { href: work.code, target: "_blank", rel: "noopener" }, "Code"));
+  return h("li", { class: "work" },
+    h("div", { class: "work-top" },
+      h("span", { class: "emoji", title: work.sports.map(s => SPORTS[s].name).join(", ") }, work.sports.map(s => SPORTS[s].emoji).join(" ")),
+      h("span", { class: "date" }, work.date),
+      h("span", { class: `venue${work.announced ? " announced" : ""}` }, work.announced ? "📣 Announced" : work.venue),
+    ),
+    h("a", { class: "work-title", href: work.paper, target: "_blank", rel: "noopener" }, work.short),
+    rest && h("div", { class: "work-full" }, rest),
+    h("div", { class: "work-meta" },
+      work.robot && h("span", {}, work.robot),
+      work.robot && h("span", {}, "·"),
+      h("span", { class: work.real ? "real" : "sim" }, work.real ? "Real robot" : "Simulation only"),
+    ),
+    h("div", { class: "links" }, links),
+  );
+}
+
+function renderPanel() {
+  const inst = activeInst;
+  const groups = inst.groups.map(g => ({ ...g, works: g.works.filter(matches) })).filter(g => g.works.length);
+  const tags = sportsOf(inst).map(s => h("span", { class: "tag" }, `${SPORTS[s].emoji} ${SPORTS[s].name}`));
+  const hidden = allWorks(inst).length - groups.reduce((n, g) => n + g.works.length, 0);
+  panel.replaceChildren(
+    h("div", { class: "panel-head" },
+      logo(inst),
+      h("div", {}, h("h2", {}, inst.name), h("div", { class: "sports" }, tags)),
+      h("button", { class: "close", type: "button", "aria-label": "Close", onclick: closePanel }, "×"),
+    ),
+    h("div", { class: "panel-body" },
+      activeSport && hidden > 0 && h("p", { class: "note" },
+        `Showing ${SPORTS[activeSport].emoji} ${SPORTS[activeSport].name} only (${hidden} more hidden). `,
+        h("button", { class: "show-all", type: "button", onclick: () => { activeSport = null; renderChips(); refreshMarkers(); renderPanel(); } }, "Show all"),
+      ),
+      groups.map(g => h("section", { class: "group" },
+        h("div", { class: "group-head" },
+          h("span", { class: "pi" }, g.pi || g.name || inst.name),
+          g.pi && g.name && (g.url
+            ? h("a", { class: "lab", href: g.url, target: "_blank", rel: "noopener" }, `${g.name} ↗`)
+            : h("span", { class: "lab" }, g.name)),
+        ),
+        h("ul", { class: "works" }, g.works.map(workCard)),
+      )),
+    ),
+  );
+}
+
+function openPanel(inst, marker) {
+  activeInst = inst;
+  history.replaceState(null, "", `#${encodeURIComponent(inst.name)}`);
+  renderPanel();
+  panel.classList.add("open");
+  panel.setAttribute("aria-hidden", "false");
+  updateIcons();
+  map.panInside(marker.getLatLng(), padding());
+  panel.querySelector(".close").focus({ preventScroll: true });
+}
+
+function closePanel() {
+  activeInst = null;
+  history.replaceState(null, "", location.pathname + location.search);
+  panel.classList.remove("open");
+  panel.setAttribute("aria-hidden", "true");
+  updateIcons();
+}
+
+document.addEventListener("keydown", e => { if (e.key === "Escape" && activeInst) closePanel(); });
+map.on("click", () => { if (activeInst) closePanel(); });
+
+// ---------------------------------------------------------------- init
+renderStats();
+renderChips();
+refreshMarkers();
+map.fitBounds(L.latLngBounds(markers.map(m => m.getLatLng())), padding());
+
+// Deep link: index.html#HKU opens that institution.
+const linked = markers.find(m => m.options.inst.name === decodeURIComponent(location.hash.slice(1)));
+if (linked) clusters.zoomToShowLayer(linked, () => openPanel(linked.options.inst, linked));
+</script>
+</body>
+</html>

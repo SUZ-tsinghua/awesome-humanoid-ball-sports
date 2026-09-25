@@ -1,5 +1,6 @@
 # Institutions: one map marker each. Coordinates are the main campus or HQ;
-# they only need to be good enough for a world map.
+# they only need to be good enough for a world map. `logo` is an optional
+# square PNG in site/logos/ (institutions without one get a monogram).
 #
 # Groups ([[labs]]): each paper belongs to exactly one group, the last author's.
 # `pi` is that last author. Referenced by id from papers.toml.
@@ -7,94 +8,111 @@
 # ---------------------------------------------------------------- North America
 
 [institutions."Caltech"]
+logo = "caltech.png"
 lat = 34.1377
 lon = -118.1253
 
 [institutions."Carnegie Mellon University"]
+logo = "cmu.png"
 lat = 40.4439
 lon = -79.9428
 
 [institutions."Cornell University"]
+logo = "cornell.png"
 lat = 42.4534
 lon = -76.4735
 
 [institutions."MIT"]
+logo = "mit.png"
 lat = 42.3601
 lon = -71.0942
 
 [institutions."Purdue University"]
+logo = "purdue.png"
 lat = 40.4237
 lon = -86.9212
 
 [institutions."Skild AI"]
+logo = "skild.png"
 lat = 40.4600
 lon = -79.9280
 
 [institutions."UC Berkeley"]
+logo = "berkeley.png"
 lat = 37.8719
 lon = -122.2585
 
 [institutions."UCLA"]
+logo = "ucla.png"
 lat = 34.0709
 lon = -118.4469
 
 [institutions."UMass Amherst"]
+logo = "umass.png"
 lat = 42.3893
 lon = -72.5284
 
-[institutions."USC"]
-lat = 34.0219
-lon = -118.2859
-
 [institutions."UT Austin"]
+logo = "utaustin.png"
 lat = 30.2851
 lon = -97.7339
 
 [institutions."UW–Madison"]
+logo = "wisc.png"
 lat = 43.0766
 lon = -89.4125
 
 # ---------------------------------------------------------------- Europe
 
 [institutions."ETH Zurich"]
+logo = "ethz.png"
 lat = 47.3763
 lon = 8.5477
 
 [institutions."Google DeepMind"]
+logo = "deepmind.png"
 lat = 51.5333
 lon = -0.1260
 
 [institutions."Sapienza University of Rome"]
+logo = "sapienza.png"
 lat = 41.9031
 lon = 12.5144
 
 [institutions."University of Aveiro"]
+logo = "aveiro.png"
 lat = 40.6320
 lon = -8.6598
 
 [institutions."University of Bonn"]
+logo = "bonn.png"
 lat = 50.7339
 lon = 7.1024
 
 [institutions."University of Hamburg"]
+logo = "hamburg.png"
 lat = 53.5667
 lon = 9.9847
 
 # ---------------------------------------------------------------- Asia
 
 [institutions."DeepCybo"]
+logo = "deepcybo.png"
 lat = 39.9835
 lon = 116.3140
 
 [institutions."HKU"]
+logo = "hku.png"
 lat = 22.2830
 lon = 114.1371
 
 [institutions."HKUST"]
+logo = "hkust.png"
 lat = 22.3364
 lon = 114.2655
 
 [institutions."Noetix Robotics"]
+logo = "noetix.png"
 lat = 39.9590
 lon = 116.2980
 
@@ -103,6 +121,7 @@ lat = 39.9042
 lon = 116.4074
 
 [institutions."Shanghai AI Lab"]
+logo = "shlab.png"
 lat = 31.1790
 lon = 121.4600
 
@@ -111,10 +130,12 @@ lat = 31.0252
 lon = 121.4337
 
 [institutions."TeleAI"]
+logo = "teleai.png"
 lat = 31.1880
 lon = 121.4370
 
 [institutions."Tsinghua University"]
+logo = "tsinghua.png"
 lat = 40.0023
 lon = 116.3210
 
@@ -169,12 +190,6 @@ pi = "Dennis W. Hong"
 id = "umass-kim"
 institution = "UMass Amherst"
 pi = "Donghyun Kim"
-
-[[labs]]
-id = "usc-drcl"
-institution = "USC"
-name = "DRCL"
-pi = "Quan Nguyen"
 
 [[labs]]
 id = "utaustin-larg"

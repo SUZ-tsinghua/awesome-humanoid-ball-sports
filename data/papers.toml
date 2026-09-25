@@ -207,17 +207,6 @@ paper = "https://arxiv.org/abs/2407.14612"
 lab = "umass-kim"
 
 [[paper]]
-date = "2024.10"
-title = "Preferenced Oracle Guided Multi-mode Policies for Dynamic Bipedal Loco-Manipulation"
-short = "Preferenced Oracle Guided Policies"
-sport = "soccer"
-venue = "arXiv"
-robot = "HECTOR, Berkeley Humanoid, Unitree G1/H1"
-real = false
-paper = "https://arxiv.org/abs/2410.01030"
-lab = "usc-drcl"
-
-[[paper]]
 date = "2024.12"
 title = "Maximum Impulse Approach to Soccer Kicking for Humanoid Robots"
 short = "Maximum Impulse Kicking"

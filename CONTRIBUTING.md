@@ -10,7 +10,7 @@ PRs and issues are welcome. Suggest a paper, fix a broken link, add your lab to 
 
 ## How the list is built
 
-The paper tables and the map in `README.md` are generated. Don't edit anything between `<!-- gen:… -->` and `<!-- /gen -->` by hand. Instead:
+The paper tables in `README.md` and the map's data (`site/data.js`) are generated. Don't edit anything between `<!-- gen:… -->` and `<!-- /gen -->` by hand. Instead:
 
 1. Add the paper to [`data/papers.toml`](data/papers.toml):
 
@@ -30,12 +30,13 @@ The paper tables and the map in `README.md` are generated. Don't edit anything b
 
    For a demo without a paper, set `status = "announced"`, point `paper` at the authors' announcement (post, video or project page), and leave out `venue`.
 
-2. If the group is new, add it to [`data/labs.toml`](data/labs.toml). Each paper has exactly one group: the last author's, with the last author as `pi`. If the institution is new too, add it as well: each institution is one map marker, placed at its campus coordinates. Leave out `lab` only for anonymous or individual work.
+2. If the group is new, add it to [`data/labs.toml`](data/labs.toml). Each paper has exactly one group: the last author's, with the last author as `pi`. If the institution is new too, add it as well: each institution is one map marker, placed at its campus coordinates. You can also add a square logo PNG to `site/logos/` and name it in `logo`; institutions without one get a monogram. Leave out `lab` only for anonymous or individual work.
 
-3. Regenerate the README and commit both files:
+3. Regenerate the README and the map data, and commit the generated files together with your data changes:
 
    ```sh
    uv run scripts/build.py      # or: python3.11+ scripts/build.py
+   open site/index.html         # optional: preview the map locally
    ```
 
-CI runs `scripts/build.py --check` and fails if the README is out of date or the data is inconsistent (unknown lab ids, bad dates, and so on).
+CI runs `scripts/build.py --check` and fails if the generated files are out of date or the data is inconsistent (unknown lab ids, bad dates, missing logo files, and so on). The map is deployed to GitHub Pages from `site/` on every push to `main`.
