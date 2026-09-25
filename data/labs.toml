@@ -57,11 +57,6 @@ logo = "utaustin.png"
 lat = 30.2851
 lon = -97.7339
 
-[institutions."UW–Madison"]
-logo = "wisc.png"
-lat = 43.0766
-lon = -89.4125
-
 # ---------------------------------------------------------------- Europe
 
 [institutions."ETH Zurich"]
@@ -197,11 +192,6 @@ id = "utaustin-larg"
 institution = "UT Austin"
 name = "LARG"
 pi = "Peter Stone"
-
-[[labs]]
-id = "uwmadison-hanna"
-institution = "UW–Madison"
-pi = "Josiah P. Hanna"
 
 [[labs]]
 id = "eth-rsl"

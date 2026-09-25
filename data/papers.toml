@@ -218,39 +218,6 @@ paper = "https://arxiv.org/abs/2412.01480"
 lab = "bonn-ais"
 
 [[paper]]
-date = "2024.12"
-title = "Reinforcement Learning Within the Classical Robotics Stack: A Case Study in Robot Soccer"
-short = "RL Within the Classical Stack"
-sport = "soccer"
-venue = "ICRA 2025"
-robot = "NAO"
-real = true
-paper = "https://arxiv.org/abs/2412.09417"
-lab = "uwmadison-hanna"
-
-[[paper]]
-date = "2025.03"
-title = "Multi-Robot Collaboration through Reinforcement Learning and Abstract Simulation"
-short = "Multi-Robot Collaboration"
-sport = "soccer"
-venue = "ICRA 2025"
-robot = "NAO"
-real = true
-paper = "https://arxiv.org/abs/2503.05092"
-lab = "uwmadison-hanna"
-
-[[paper]]
-date = "2025.04"
-title = "Model Predictive Control with Visibility Graphs for Humanoid Path Planning and Tracking Against Adversarial Opponents"
-short = "MPC with Visibility Graphs"
-sport = "soccer"
-venue = "ICRA 2025"
-robot = "ARTEMIS"
-real = true
-paper = "https://arxiv.org/abs/2504.02184"
-lab = "ucla-romela"
-
-[[paper]]
 date = "2025.04"
 title = "SoccerDiffusion: Toward Learning End-to-End Humanoid Robot Soccer from Gameplay Recordings"
 sport = "soccer"

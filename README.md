@@ -1,11 +1,11 @@
 # Awesome Humanoid Ball Sports [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-As robot learning leans more and more toward scaling, it can seem like there is less and less left for academic labs to do. I've long believed that humanoid sports is a topic especially well suited to academia: it doesn't need huge amounts of compute or data, but it does take a lot of effort and ingenuity. I made this list to make literature review in this area easier for everyone.
+As robot learning leans more and more toward scaling, it can seem like there is less and less left for academic labs to do. I believe humanoid ball sports is a topic especially well suited to academia: it doesn't need huge amounts of compute or data, but it does take a lot of effort and ingenuity. I made this list to make literature review in this area easier for everyone.
 
 It collects research on humanoid robots playing **table tennis, tennis, badminton, soccer and basketball**, plus a map of which groups work on which sport.
 
 <!-- gen:stats -->
-**39** works · **30** groups · **26** institutions
+**36** works · **29** groups · **25** institutions
 <!-- /gen -->
 
 Each entry lists when it first appeared, where it was published (📣 = public demo, no paper yet), which robot it uses, whether it was shown on real hardware (✅ real robot, 🖥️ simulation only), and links to its project page and code.
@@ -73,9 +73,6 @@ Each entry lists when it first appeared, where it was published (📣 = public d
 | 2024.05 | [Learning Robot Soccer from Egocentric Vision with Deep Reinforcement Learning](https://arxiv.org/abs/2405.02425) | CoRL 2024 | Robotis OP3 | ✅ | Nicolas Heess, Google DeepMind | [project](https://sites.google.com/view/vision-soccer) |
 | 2024.07 | [A Biomechanics-Inspired Approach to Soccer Kicking for Humanoid Robots](https://arxiv.org/abs/2407.14612) | arXiv | PresToe | 🖥️ | Donghyun Kim, UMass Amherst | — |
 | 2024.12 | [Maximum Impulse Approach to Soccer Kicking for Humanoid Robots](https://arxiv.org/abs/2412.01480) | arXiv | NimbRo-OP2X | ✅ | Sven Behnke, University of Bonn | — |
-| 2024.12 | [Reinforcement Learning Within the Classical Robotics Stack: A Case Study in Robot Soccer](https://arxiv.org/abs/2412.09417) | ICRA 2025 | NAO | ✅ | Josiah P. Hanna, UW–Madison | — |
-| 2025.03 | [Multi-Robot Collaboration through Reinforcement Learning and Abstract Simulation](https://arxiv.org/abs/2503.05092) | ICRA 2025 | NAO | ✅ | Josiah P. Hanna, UW–Madison | — |
-| 2025.04 | [Model Predictive Control with Visibility Graphs for Humanoid Path Planning and Tracking Against Adversarial Opponents](https://arxiv.org/abs/2504.02184) | ICRA 2025 | ARTEMIS | ✅ | Dennis W. Hong, UCLA | — |
 | 2025.04 | [SoccerDiffusion: Toward Learning End-to-End Humanoid Robot Soccer from Gameplay Recordings](https://arxiv.org/abs/2504.20808) | arXiv | Wolfgang-OP | ✅ | Jianwei Zhang, University of Hamburg | [project](https://bit-bots.github.io/SoccerDiffusion) · [code](https://github.com/bit-bots/SoccerDiffusion) |
 | 2025.05 | [Dribble Master: Learning Agile Humanoid Dribbling through Legged Locomotion](https://arxiv.org/abs/2505.12679) | ICRA 2026 | Booster T1 | ✅ | Qi Wu, Cornell University | [project](https://zhuoheng0910.github.io/dribble-master/) · [code](https://github.com/Zhuoheng0910/DribbleMaster) |
 | 2025.10 | [Humanoid Goalkeeper: Learning from Position Conditioned Task-Motion Constraints](https://arxiv.org/abs/2510.18002) | arXiv | Unitree G1 | ✅ | Jiangmiao Pang, Shanghai AI Lab | [project](https://humanoid-goalkeeper.github.io/Goalkeeper/) · [code](https://github.com/InternRobotics/Humanoid-Goalkeeper) |

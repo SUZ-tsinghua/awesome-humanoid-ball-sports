@@ -704,19 +704,6 @@ window.MAP_DATA = {
      "pi": "Dennis W. Hong",
      "works": [
       {
-       "title": "Model Predictive Control with Visibility Graphs for Humanoid Path Planning and Tracking Against Adversarial Opponents",
-       "short": "MPC with Visibility Graphs",
-       "date": "2025.04",
-       "sports": [
-        "soccer"
-       ],
-       "venue": "ICRA 2025",
-       "announced": false,
-       "real": true,
-       "robot": "ARTEMIS",
-       "paper": "https://arxiv.org/abs/2504.02184"
-      },
-      {
        "title": "A Hierarchical, Model-Based System for High-Performance Humanoid Soccer",
        "short": "Model-Based Humanoid Soccer",
        "date": "2025.12",
@@ -788,45 +775,6 @@ window.MAP_DATA = {
     }
    ],
    "logo": "logos/utaustin.png"
-  },
-  {
-   "name": "UW–Madison",
-   "lat": 43.0766,
-   "lon": -89.4125,
-   "groups": [
-    {
-     "pi": "Josiah P. Hanna",
-     "works": [
-      {
-       "title": "Reinforcement Learning Within the Classical Robotics Stack: A Case Study in Robot Soccer",
-       "short": "RL Within the Classical Stack",
-       "date": "2024.12",
-       "sports": [
-        "soccer"
-       ],
-       "venue": "ICRA 2025",
-       "announced": false,
-       "real": true,
-       "robot": "NAO",
-       "paper": "https://arxiv.org/abs/2412.09417"
-      },
-      {
-       "title": "Multi-Robot Collaboration through Reinforcement Learning and Abstract Simulation",
-       "short": "Multi-Robot Collaboration",
-       "date": "2025.03",
-       "sports": [
-        "soccer"
-       ],
-       "venue": "ICRA 2025",
-       "announced": false,
-       "real": true,
-       "robot": "NAO",
-       "paper": "https://arxiv.org/abs/2503.05092"
-      }
-     ]
-    }
-   ],
-   "logo": "logos/wisc.png"
   },
   {
    "name": "University of Aveiro",
