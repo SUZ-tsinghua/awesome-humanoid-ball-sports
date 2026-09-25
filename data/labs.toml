@@ -42,11 +42,6 @@ logo = "berkeley.png"
 lat = 37.8719
 lon = -122.2585
 
-[institutions."UCLA"]
-logo = "ucla.png"
-lat = 34.0709
-lon = -118.4469
-
 [institutions."UMass Amherst"]
 logo = "umass.png"
 lat = 42.3893
@@ -78,11 +73,6 @@ lon = 12.5144
 logo = "aveiro.png"
 lat = 40.6320
 lon = -8.6598
-
-[institutions."University of Bonn"]
-logo = "bonn.png"
-lat = 50.7339
-lon = 7.1024
 
 [institutions."University of Hamburg"]
 logo = "hamburg.png"
@@ -177,12 +167,6 @@ institution = "UC Berkeley"
 pi = "S. Shankar Sastry"
 
 [[labs]]
-id = "ucla-romela"
-institution = "UCLA"
-name = "RoMeLa"
-pi = "Dennis W. Hong"
-
-[[labs]]
 id = "umass-kim"
 institution = "UMass Amherst"
 pi = "Donghyun Kim"
@@ -216,12 +200,6 @@ id = "aveiro-lau"
 institution = "University of Aveiro"
 name = "IEETA"
 pi = "Nuno Lau"
-
-[[labs]]
-id = "bonn-ais"
-institution = "University of Bonn"
-name = "Autonomous Intelligent Systems"
-pi = "Sven Behnke"
 
 [[labs]]
 id = "hamburg-tams"

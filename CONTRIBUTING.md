@@ -6,7 +6,7 @@ PRs and issues are welcome. Suggest a paper, fix a broken link, add your lab to 
 
 - **In:** humanoid robots, real or simulated robot models (G1, T1, E1, OP3, NAO, …), playing **table tennis, tennis, badminton, soccer or basketball**, or practicing one of the sport's skills: striking, kicking, dribbling, shooting, goalkeeping, rallying.
 - **Only official sources:** the original paper, and the authors' own project page and repo. Research-group demos that don't have a paper yet count too, if the authors announced them themselves.
-- **Out:** third-party reimplementations and "inspired by" projects; company promo demos with no paper or code; non-humanoid robots (arms, quadrupeds); physics-based character animation; generic locomotion or manipulation papers where the sport is only one example task; benchmarks, competitions and surveys.
+- **Out:** purely model-based systems with no learning component; third-party reimplementations and "inspired by" projects; company promo demos with no paper or code; non-humanoid robots (arms, quadrupeds); physics-based character animation; generic locomotion or manipulation papers where the sport is only one example task; benchmarks, competitions and surveys.
 
 ## How the list is built
 

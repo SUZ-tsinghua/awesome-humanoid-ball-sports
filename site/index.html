@@ -112,6 +112,8 @@
     border-radius: 8px; box-shadow: var(--shadow); padding: 4px 8px; font-weight: 600;
   }
   .leaflet-tooltip.tip::before { display: none; }
+  .leader { stroke: var(--muted); stroke-width: 1.5; stroke-opacity: 0.8; }
+  .leader-dot { fill: var(--muted); fill-opacity: 1; stroke: var(--card); stroke-width: 1.5; }
 
   /* Detail panel */
   .panel {
@@ -265,10 +267,12 @@ function setTiles() {
 setTiles();
 dark.addEventListener("change", setTiles);
 
+const leaders = L.layerGroup().addTo(map);
 const layer = L.layerGroup().addTo(map);
 
 const markers = INSTITUTIONS.map(inst => {
-  const marker = L.marker([inst.lat, inst.lon], { inst, keyboard: true, riseOnHover: true });
+  const home = L.latLng(inst.lat, inst.lon);
+  const marker = L.marker(home, { inst, home, keyboard: true, riseOnHover: true });
   marker.bindTooltip(inst.name, { className: "tip", direction: "top", offset: [0, -4] });
   marker.on("click", () => openPanel(inst, marker));
   marker.on("add", () => labelMarker(marker));
@@ -285,8 +289,9 @@ const padding = () => wide()
   ? { paddingTopLeft: [410, 40], paddingBottomRight: [activeInst ? 470 : 40, 40] }
   : { paddingTopLeft: [20, 130], paddingBottomRight: [20, activeInst ? window.innerHeight * 0.62 + 60 : 20] };
 
-// Every institution keeps its own marker; markers shrink when zoomed out so
-// neighbours overlap less, and zooming in pulls them apart.
+// Every institution keeps its own marker. Markers shrink when zoomed out, and
+// markers that would still overlap are nudged apart (see layoutMarkers), with
+// a thin line back to each true location.
 const pinSize = () => (map.getZoom() <= 3 ? 30 : map.getZoom() <= 5 ? 36 : 44);
 
 function pinIcon(inst) {
@@ -309,15 +314,59 @@ function updateIcons() {
     labelMarker(m);
   }
 }
-map.on("zoomend", () => { if (pinSize() !== iconSize) updateIcons(); });
+map.on("zoomend", () => {
+  if (pinSize() !== iconSize) updateIcons();
+  layoutMarkers();
+});
+
+// Push overlapping markers apart while a weak spring pulls each one back to
+// its true location, so crowded cities spread out locally instead of merging.
+function layoutMarkers() {
+  const minDist = pinSize() + 6;
+  const visible = markers.filter(m => layer.hasLayer(m));
+  const home = visible.map(m => map.latLngToLayerPoint(m.options.home));
+  // A tiny golden-angle jitter gives markers at identical spots a direction to move in.
+  const pos = home.map((p, i) => ({ x: p.x + Math.cos(i * 2.4) * 0.5, y: p.y + Math.sin(i * 2.4) * 0.5 }));
+  const separate = () => {
+    let overlap = false;
+    for (let i = 0; i < pos.length; i++) {
+      for (let j = i + 1; j < pos.length; j++) {
+        const dx = pos[j].x - pos[i].x, dy = pos[j].y - pos[i].y;
+        const dist = Math.hypot(dx, dy) || 0.01;
+        if (dist >= minDist) continue;
+        const push = (minDist - dist) / 2 / dist;
+        pos[i].x -= dx * push; pos[i].y -= dy * push;
+        pos[j].x += dx * push; pos[j].y += dy * push;
+        overlap = true;
+      }
+    }
+    return overlap;
+  };
+  for (let iter = 0; iter < 150; iter++) {
+    if (!separate()) break;
+    pos.forEach((p, i) => { p.x += (home[i].x - p.x) * 0.05; p.y += (home[i].y - p.y) * 0.05; });
+  }
+  for (let iter = 0; iter < 50 && separate(); iter++);
+
+  leaders.clearLayers();
+  visible.forEach((m, i) => {
+    const shown = map.layerPointToLatLng(L.point(pos[i].x, pos[i].y));
+    m.setLatLng(shown);
+    if (Math.hypot(pos[i].x - home[i].x, pos[i].y - home[i].y) > 3) {
+      leaders.addLayer(L.polyline([m.options.home, shown], { className: "leader", interactive: false }));
+      leaders.addLayer(L.circleMarker(m.options.home, { radius: 3, className: "leader-dot", interactive: false }));
+    }
+  });
+}
 
 function refreshMarkers({ fit = false } = {}) {
   const visible = markers.filter(m => allWorks(m.options.inst).some(matches));
   updateIcons();
   layer.clearLayers();
   for (const m of visible) layer.addLayer(m);
+  layoutMarkers();
   if (fit && visible.length) {
-    map.flyToBounds(L.latLngBounds(visible.map(m => m.getLatLng())), { ...padding(), maxZoom: 5, duration: 0.8 });
+    map.flyToBounds(L.latLngBounds(visible.map(m => m.options.home)), { ...padding(), maxZoom: 5, duration: 0.8 });
   }
 }
 
@@ -423,15 +472,15 @@ document.addEventListener("keydown", e => { if (e.key === "Escape" && activeInst
 map.on("click", () => { if (activeInst) closePanel(); });
 
 // ---------------------------------------------------------------- init
+map.fitBounds(L.latLngBounds(markers.map(m => m.options.home)), padding());
 renderStats();
 renderChips();
 refreshMarkers();
-map.fitBounds(L.latLngBounds(markers.map(m => m.getLatLng())), padding());
 
 // Deep link: index.html#HKU opens that institution.
 const linked = markers.find(m => m.options.inst.name === decodeURIComponent(location.hash.slice(1)));
 if (linked) {
-  map.setView(linked.getLatLng(), 7);
+  map.setView(linked.options.home, 7);
   openPanel(linked.options.inst, linked);
 }
 </script>

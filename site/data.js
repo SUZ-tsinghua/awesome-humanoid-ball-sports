@@ -246,20 +246,6 @@ window.MAP_DATA = {
      "pi": "Peng Lu",
      "works": [
       {
-       "title": "Like Playing a Video Game: Spatial-Temporal Optimization of Foot Trajectories for Controlled Football Kicking in Bipedal Robots",
-       "short": "STOFT",
-       "date": "2025.10",
-       "sports": [
-        "soccer"
-       ],
-       "venue": "IROS 2025",
-       "announced": false,
-       "real": true,
-       "robot": "PEARL biped",
-       "paper": "https://arxiv.org/abs/2510.01843",
-       "project": "https://arclab-hku.github.io/STOFT/"
-      },
-      {
        "title": "Learning Human-Like Badminton Skills for Humanoid Robots",
        "short": "LHBS",
        "date": "2026.02",
@@ -695,33 +681,6 @@ window.MAP_DATA = {
    "logo": "logos/berkeley.png"
   },
   {
-   "name": "UCLA",
-   "lat": 34.0709,
-   "lon": -118.4469,
-   "groups": [
-    {
-     "name": "RoMeLa",
-     "pi": "Dennis W. Hong",
-     "works": [
-      {
-       "title": "A Hierarchical, Model-Based System for High-Performance Humanoid Soccer",
-       "short": "Model-Based Humanoid Soccer",
-       "date": "2025.12",
-       "sports": [
-        "soccer"
-       ],
-       "venue": "arXiv",
-       "announced": false,
-       "real": true,
-       "robot": "ARTEMIS",
-       "paper": "https://arxiv.org/abs/2512.09431"
-      }
-     ]
-    }
-   ],
-   "logo": "logos/ucla.png"
-  },
-  {
    "name": "UMass Amherst",
    "lat": 42.3893,
    "lon": -72.5284,
@@ -803,46 +762,6 @@ window.MAP_DATA = {
     }
    ],
    "logo": "logos/aveiro.png"
-  },
-  {
-   "name": "University of Bonn",
-   "lat": 50.7339,
-   "lon": 7.1024,
-   "groups": [
-    {
-     "name": "Autonomous Intelligent Systems",
-     "pi": "Sven Behnke",
-     "works": [
-      {
-       "title": "RoboCup 2023 Humanoid AdultSize Winner NimbRo: NimbRoNet3 Visual Perception and Responsive Gait with Waveform In-walk Kicks",
-       "short": "NimbRo (RoboCup 2023 winner)",
-       "date": "2024.01",
-       "sports": [
-        "soccer"
-       ],
-       "venue": "RoboCup 2023 Symposium",
-       "announced": false,
-       "real": true,
-       "robot": "NimbRo-OP2X",
-       "paper": "https://arxiv.org/abs/2401.05909"
-      },
-      {
-       "title": "Maximum Impulse Approach to Soccer Kicking for Humanoid Robots",
-       "short": "Maximum Impulse Kicking",
-       "date": "2024.12",
-       "sports": [
-        "soccer"
-       ],
-       "venue": "arXiv",
-       "announced": false,
-       "real": true,
-       "robot": "NimbRo-OP2X",
-       "paper": "https://arxiv.org/abs/2412.01480"
-      }
-     ]
-    }
-   ],
-   "logo": "logos/bonn.png"
   },
   {
    "name": "University of Hamburg",

@@ -173,17 +173,6 @@ code = "https://github.com/m-abr/FCPCodebase"
 lab = "aveiro-lau"
 
 [[paper]]
-date = "2024.01"
-title = "RoboCup 2023 Humanoid AdultSize Winner NimbRo: NimbRoNet3 Visual Perception and Responsive Gait with Waveform In-walk Kicks"
-short = "NimbRo (RoboCup 2023 winner)"
-sport = "soccer"
-venue = "RoboCup 2023 Symposium"
-robot = "NimbRo-OP2X"
-real = true
-paper = "https://arxiv.org/abs/2401.05909"
-lab = "bonn-ais"
-
-[[paper]]
 date = "2024.05"
 title = "Learning Robot Soccer from Egocentric Vision with Deep Reinforcement Learning"
 short = "Soccer from Egocentric Vision"
@@ -205,17 +194,6 @@ robot = "PresToe"
 real = false
 paper = "https://arxiv.org/abs/2407.14612"
 lab = "umass-kim"
-
-[[paper]]
-date = "2024.12"
-title = "Maximum Impulse Approach to Soccer Kicking for Humanoid Robots"
-short = "Maximum Impulse Kicking"
-sport = "soccer"
-venue = "arXiv"
-robot = "NimbRo-OP2X"
-real = true
-paper = "https://arxiv.org/abs/2412.01480"
-lab = "bonn-ais"
 
 [[paper]]
 date = "2025.04"
@@ -240,18 +218,6 @@ paper = "https://arxiv.org/abs/2505.12679"
 project = "https://zhuoheng0910.github.io/dribble-master/"
 code = "https://github.com/Zhuoheng0910/DribbleMaster"
 lab = "cornell-wu"
-
-[[paper]]
-date = "2025.10"
-title = "Like Playing a Video Game: Spatial-Temporal Optimization of Foot Trajectories for Controlled Football Kicking in Bipedal Robots"
-short = "STOFT"
-sport = "soccer"
-venue = "IROS 2025"
-robot = "PEARL biped"
-real = true
-paper = "https://arxiv.org/abs/2510.01843"
-project = "https://arclab-hku.github.io/STOFT/"
-lab = "hku-arclab"
 
 [[paper]]
 date = "2025.10"
@@ -290,17 +256,6 @@ paper = "https://arxiv.org/abs/2512.06571"
 project = "https://humanoidsoccer.github.io"
 code = "https://github.com/Daffan/humanoid-soccer"
 lab = "utaustin-larg"
-
-[[paper]]
-date = "2025.12"
-title = "A Hierarchical, Model-Based System for High-Performance Humanoid Soccer"
-short = "Model-Based Humanoid Soccer"
-sport = "soccer"
-venue = "arXiv"
-robot = "ARTEMIS"
-real = true
-paper = "https://arxiv.org/abs/2512.09431"
-lab = "ucla-romela"
 
 [[paper]]
 date = "2026.02"

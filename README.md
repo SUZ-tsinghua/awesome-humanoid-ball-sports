@@ -5,7 +5,7 @@ As robot learning leans more and more toward scaling, it can seem like there is 
 It collects research on humanoid robots playing **table tennis 🏓, tennis 🎾, badminton 🏸, soccer ⚽ and basketball 🏀**, plus a map of which groups work on which sport.
 
 <!-- gen:stats -->
-**36** works · **29** groups · **25** institutions
+**32** works · **27** groups · **23** institutions
 <!-- /gen -->
 
 Each entry lists when it first appeared, where it was published (📣 = public demo, no paper yet), which robot it uses, whether it was shown on real hardware (✅ real robot, 🖥️ simulation only), and links to its project page and code.
@@ -69,16 +69,12 @@ Each entry lists when it first appeared, where it was published (📣 = public d
 |---|---|---|---|---|---|---|
 | 2023.04 | [Learning Agile Soccer Skills for a Bipedal Robot with Deep Reinforcement Learning](https://arxiv.org/abs/2304.13653) | Science Robotics 2024 | Robotis OP3 | ✅ | Nicolas Heess, Google DeepMind | [project](https://sites.google.com/view/op3-soccer) |
 | 2023.12 | [Designing a skilled soccer team for RoboCup: exploring skill-set-primitives through reinforcement learning](https://arxiv.org/abs/2312.14360) | Neural Computing and Applications 2025 | NAO (SimSpark) | 🖥️ | Nuno Lau, University of Aveiro | [code](https://github.com/m-abr/FCPCodebase) |
-| 2024.01 | [RoboCup 2023 Humanoid AdultSize Winner NimbRo: NimbRoNet3 Visual Perception and Responsive Gait with Waveform In-walk Kicks](https://arxiv.org/abs/2401.05909) | RoboCup 2023 Symposium | NimbRo-OP2X | ✅ | Sven Behnke, University of Bonn | — |
 | 2024.05 | [Learning Robot Soccer from Egocentric Vision with Deep Reinforcement Learning](https://arxiv.org/abs/2405.02425) | CoRL 2024 | Robotis OP3 | ✅ | Nicolas Heess, Google DeepMind | [project](https://sites.google.com/view/vision-soccer) |
 | 2024.07 | [A Biomechanics-Inspired Approach to Soccer Kicking for Humanoid Robots](https://arxiv.org/abs/2407.14612) | arXiv | PresToe | 🖥️ | Donghyun Kim, UMass Amherst | — |
-| 2024.12 | [Maximum Impulse Approach to Soccer Kicking for Humanoid Robots](https://arxiv.org/abs/2412.01480) | arXiv | NimbRo-OP2X | ✅ | Sven Behnke, University of Bonn | — |
 | 2025.04 | [SoccerDiffusion: Toward Learning End-to-End Humanoid Robot Soccer from Gameplay Recordings](https://arxiv.org/abs/2504.20808) | arXiv | Wolfgang-OP | ✅ | Jianwei Zhang, University of Hamburg | [project](https://bit-bots.github.io/SoccerDiffusion) · [code](https://github.com/bit-bots/SoccerDiffusion) |
 | 2025.05 | [Dribble Master: Learning Agile Humanoid Dribbling through Legged Locomotion](https://arxiv.org/abs/2505.12679) | ICRA 2026 | Booster T1 | ✅ | Qi Wu, Cornell University | [project](https://zhuoheng0910.github.io/dribble-master/) · [code](https://github.com/Zhuoheng0910/DribbleMaster) |
 | 2025.10 | [Humanoid Goalkeeper: Learning from Position Conditioned Task-Motion Constraints](https://arxiv.org/abs/2510.18002) | arXiv | Unitree G1 | ✅ | Jiangmiao Pang, Shanghai AI Lab | [project](https://humanoid-goalkeeper.github.io/Goalkeeper/) · [code](https://github.com/InternRobotics/Humanoid-Goalkeeper) |
-| 2025.10 | [Like Playing a Video Game: Spatial-Temporal Optimization of Foot Trajectories for Controlled Football Kicking in Bipedal Robots](https://arxiv.org/abs/2510.01843) | IROS 2025 | PEARL biped | ✅ | Peng Lu, HKU | [project](https://arclab-hku.github.io/STOFT/) |
 | 2025.11 | [Learning Vision-Driven Reactive Soccer Skills for Humanoid Robots](https://arxiv.org/abs/2511.03996) | Science Robotics 2026 | Booster T1 | ✅ | Mingguo Zhao, Tsinghua University | [project](https://humanoid-kick.github.io) · [code](https://zenodo.org/records/21620490) |
-| 2025.12 | [A Hierarchical, Model-Based System for High-Performance Humanoid Soccer](https://arxiv.org/abs/2512.09431) | arXiv | ARTEMIS | ✅ | Dennis W. Hong, UCLA | — |
 | 2025.12 | [Learning Agile Striker Skills for Humanoid Soccer Robots from Noisy Sensory Input](https://arxiv.org/abs/2512.06571) | ICRA 2026 | Booster T1 | ✅ | Peter Stone, UT Austin | [project](https://humanoidsoccer.github.io) · [code](https://github.com/Daffan/humanoid-soccer) |
 | 2026.02 | [HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos](https://arxiv.org/abs/2602.02473) | arXiv | Unitree G1 | ✅ | Ping Tan, HKUST | [project](https://wyhuai.github.io/human-x/) · code (soon) |
 | 2026.02 | [Learning Soccer Skills for Humanoid Robots: A Progressive Perception-Action Framework](https://arxiv.org/abs/2602.05310) | arXiv | Unitree G1 | ✅ | Xuelong Li, TeleAI | [project](https://soccer-humanoid.github.io/) · [code](https://github.com/TeleHuman/HumanoidSoccer) |
