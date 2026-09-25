@@ -216,12 +216,6 @@ institution = "Google DeepMind"
 pi = "Nicolas Heess"
 
 [[labs]]
-id = "sapienza-nardi"
-institution = "Sapienza University of Rome"
-name = "Lab RoCoCo"
-pi = "Daniele Nardi"
-
-[[labs]]
 id = "sapienza-iocchi"
 institution = "Sapienza University of Rome"
 name = "Lab RoCoCo"

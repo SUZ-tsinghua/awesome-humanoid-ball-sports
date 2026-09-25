@@ -456,25 +456,6 @@ window.MAP_DATA = {
    "groups": [
     {
      "name": "Lab RoCoCo",
-     "pi": "Daniele Nardi",
-     "works": [
-      {
-       "title": "Multi Robot Coordination in Highly Dynamic Environments: Tackling Asymmetric Obstacles and Limited Communication",
-       "short": "Multi Robot Coordination",
-       "date": "2025.09",
-       "sports": [
-        "soccer"
-       ],
-       "venue": "IAS-19 2025",
-       "announced": false,
-       "real": true,
-       "robot": "NAO",
-       "paper": "https://arxiv.org/abs/2509.08859"
-      }
-     ]
-    },
-    {
-     "name": "Lab RoCoCo",
      "pi": "Luca Iocchi",
      "works": [
       {

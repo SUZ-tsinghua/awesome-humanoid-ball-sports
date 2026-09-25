@@ -275,17 +275,6 @@ code = "https://github.com/Zhuoheng0910/DribbleMaster"
 lab = "cornell-wu"
 
 [[paper]]
-date = "2025.09"
-title = "Multi Robot Coordination in Highly Dynamic Environments: Tackling Asymmetric Obstacles and Limited Communication"
-short = "Multi Robot Coordination"
-sport = "soccer"
-venue = "IAS-19 2025"
-robot = "NAO"
-real = true
-paper = "https://arxiv.org/abs/2509.08859"
-lab = "sapienza-nardi"
-
-[[paper]]
 date = "2025.10"
 title = "Like Playing a Video Game: Spatial-Temporal Optimization of Foot Trajectories for Controlled Football Kicking in Bipedal Robots"
 short = "STOFT"

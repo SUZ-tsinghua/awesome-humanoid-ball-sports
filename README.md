@@ -5,7 +5,7 @@ As robot learning leans more and more toward scaling, it can seem like there is 
 It collects research on humanoid robots playing **table tennis, tennis, badminton, soccer and basketball**, plus a map of which groups work on which sport.
 
 <!-- gen:stats -->
-**40** works · **31** groups · **26** institutions
+**39** works · **30** groups · **26** institutions
 <!-- /gen -->
 
 Each entry lists when it first appeared, where it was published (📣 = public demo, no paper yet), which robot it uses, whether it was shown on real hardware (✅ real robot, 🖥️ simulation only), and links to its project page and code.
@@ -78,7 +78,6 @@ Each entry lists when it first appeared, where it was published (📣 = public d
 | 2025.04 | [Model Predictive Control with Visibility Graphs for Humanoid Path Planning and Tracking Against Adversarial Opponents](https://arxiv.org/abs/2504.02184) | ICRA 2025 | ARTEMIS | ✅ | Dennis W. Hong, UCLA | — |
 | 2025.04 | [SoccerDiffusion: Toward Learning End-to-End Humanoid Robot Soccer from Gameplay Recordings](https://arxiv.org/abs/2504.20808) | arXiv | Wolfgang-OP | ✅ | Jianwei Zhang, University of Hamburg | [project](https://bit-bots.github.io/SoccerDiffusion) · [code](https://github.com/bit-bots/SoccerDiffusion) |
 | 2025.05 | [Dribble Master: Learning Agile Humanoid Dribbling through Legged Locomotion](https://arxiv.org/abs/2505.12679) | ICRA 2026 | Booster T1 | ✅ | Qi Wu, Cornell University | [project](https://zhuoheng0910.github.io/dribble-master/) · [code](https://github.com/Zhuoheng0910/DribbleMaster) |
-| 2025.09 | [Multi Robot Coordination in Highly Dynamic Environments: Tackling Asymmetric Obstacles and Limited Communication](https://arxiv.org/abs/2509.08859) | IAS-19 2025 | NAO | ✅ | Daniele Nardi, Sapienza University of Rome | — |
 | 2025.10 | [Humanoid Goalkeeper: Learning from Position Conditioned Task-Motion Constraints](https://arxiv.org/abs/2510.18002) | arXiv | Unitree G1 | ✅ | Jiangmiao Pang, Shanghai AI Lab | [project](https://humanoid-goalkeeper.github.io/Goalkeeper/) · [code](https://github.com/InternRobotics/Humanoid-Goalkeeper) |
 | 2025.10 | [Like Playing a Video Game: Spatial-Temporal Optimization of Foot Trajectories for Controlled Football Kicking in Bipedal Robots](https://arxiv.org/abs/2510.01843) | IROS 2025 | PEARL biped | ✅ | Peng Lu, HKU | [project](https://arclab-hku.github.io/STOFT/) |
 | 2025.11 | [Learning Vision-Driven Reactive Soccer Skills for Humanoid Robots](https://arxiv.org/abs/2511.03996) | Science Robotics 2026 | Booster T1 | ✅ | Mingguo Zhao, Tsinghua University | [project](https://humanoid-kick.github.io) · [code](https://zenodo.org/records/21620490) |
