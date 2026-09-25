@@ -1,0 +1,300 @@
+# Institutions: one map marker each. Coordinates are the main campus or HQ;
+# they only need to be good enough for a world map.
+#
+# Groups ([[labs]]): each paper belongs to exactly one group, the last author's.
+# `pi` is that last author. Referenced by id from papers.toml.
+
+# ---------------------------------------------------------------- North America
+
+[institutions."Caltech"]
+lat = 34.1377
+lon = -118.1253
+
+[institutions."Carnegie Mellon University"]
+lat = 40.4439
+lon = -79.9428
+
+[institutions."Cornell University"]
+lat = 42.4534
+lon = -76.4735
+
+[institutions."MIT"]
+lat = 42.3601
+lon = -71.0942
+
+[institutions."Purdue University"]
+lat = 40.4237
+lon = -86.9212
+
+[institutions."Skild AI"]
+lat = 40.4600
+lon = -79.9280
+
+[institutions."UC Berkeley"]
+lat = 37.8719
+lon = -122.2585
+
+[institutions."UCLA"]
+lat = 34.0709
+lon = -118.4469
+
+[institutions."UMass Amherst"]
+lat = 42.3893
+lon = -72.5284
+
+[institutions."USC"]
+lat = 34.0219
+lon = -118.2859
+
+[institutions."UT Austin"]
+lat = 30.2851
+lon = -97.7339
+
+[institutions."UW–Madison"]
+lat = 43.0766
+lon = -89.4125
+
+# ---------------------------------------------------------------- Europe
+
+[institutions."ETH Zurich"]
+lat = 47.3763
+lon = 8.5477
+
+[institutions."Google DeepMind"]
+lat = 51.5333
+lon = -0.1260
+
+[institutions."Sapienza University of Rome"]
+lat = 41.9031
+lon = 12.5144
+
+[institutions."University of Aveiro"]
+lat = 40.6320
+lon = -8.6598
+
+[institutions."University of Bonn"]
+lat = 50.7339
+lon = 7.1024
+
+[institutions."University of Hamburg"]
+lat = 53.5667
+lon = 9.9847
+
+# ---------------------------------------------------------------- Asia
+
+[institutions."DeepCybo"]
+lat = 39.9835
+lon = 116.3140
+
+[institutions."HKU"]
+lat = 22.2830
+lon = 114.1371
+
+[institutions."HKUST"]
+lat = 22.3364
+lon = 114.2655
+
+[institutions."Noetix Robotics"]
+lat = 39.9590
+lon = 116.2980
+
+[institutions."Phybot"]
+lat = 39.9042
+lon = 116.4074
+
+[institutions."Shanghai AI Lab"]
+lat = 31.1790
+lon = 121.4600
+
+[institutions."Shanghai Jiao Tong University"]
+lat = 31.0252
+lon = 121.4337
+
+[institutions."TeleAI"]
+lat = 31.1880
+lon = 121.4370
+
+[institutions."Tsinghua University"]
+lat = 40.0023
+lon = 116.3210
+
+# ---------------------------------------------------------------- groups
+
+[[labs]]
+id = "caltech-amber"
+institution = "Caltech"
+name = "AMBER Lab"
+pi = "Aaron D. Ames"
+
+[[labs]]
+id = "cmu-safeai"
+institution = "Carnegie Mellon University"
+name = "Safe AI Lab"
+pi = "Ding Zhao"
+
+[[labs]]
+id = "cornell-wu"
+institution = "Cornell University"
+pi = "Qi Wu"
+
+[[labs]]
+id = "mit-improbable"
+institution = "MIT"
+name = "Improbable AI Lab"
+pi = "Pulkit Agrawal"
+
+[[labs]]
+id = "purdue-trace"
+institution = "Purdue University"
+name = "TRACE Lab"
+pi = "Yan Gu"
+url = "https://www.thetracelab.com/"
+
+[[labs]]
+id = "skild"
+institution = "Skild AI"
+
+[[labs]]
+id = "berkeley-sastry"
+institution = "UC Berkeley"
+pi = "S. Shankar Sastry"
+
+[[labs]]
+id = "ucla-romela"
+institution = "UCLA"
+name = "RoMeLa"
+pi = "Dennis W. Hong"
+
+[[labs]]
+id = "umass-kim"
+institution = "UMass Amherst"
+pi = "Donghyun Kim"
+
+[[labs]]
+id = "usc-drcl"
+institution = "USC"
+name = "DRCL"
+pi = "Quan Nguyen"
+
+[[labs]]
+id = "utaustin-larg"
+institution = "UT Austin"
+name = "LARG"
+pi = "Peter Stone"
+
+[[labs]]
+id = "uwmadison-hanna"
+institution = "UW–Madison"
+pi = "Josiah P. Hanna"
+
+[[labs]]
+id = "eth-rsl"
+institution = "ETH Zurich"
+name = "Robotic Systems Lab"
+pi = "Marco Hutter"
+url = "https://rsl.ethz.ch/"
+
+[[labs]]
+id = "deepmind-heess"
+institution = "Google DeepMind"
+pi = "Nicolas Heess"
+
+[[labs]]
+id = "sapienza-nardi"
+institution = "Sapienza University of Rome"
+name = "Lab RoCoCo"
+pi = "Daniele Nardi"
+
+[[labs]]
+id = "sapienza-iocchi"
+institution = "Sapienza University of Rome"
+name = "Lab RoCoCo"
+pi = "Luca Iocchi"
+
+[[labs]]
+id = "aveiro-lau"
+institution = "University of Aveiro"
+name = "IEETA"
+pi = "Nuno Lau"
+
+[[labs]]
+id = "bonn-ais"
+institution = "University of Bonn"
+name = "Autonomous Intelligent Systems"
+pi = "Sven Behnke"
+
+[[labs]]
+id = "hamburg-tams"
+institution = "University of Hamburg"
+name = "TAMS"
+pi = "Jianwei Zhang"
+
+[[labs]]
+id = "deepcybo"
+institution = "DeepCybo"
+pi = "Kai Chen"
+
+[[labs]]
+id = "hku-arclab"
+institution = "HKU"
+name = "ArcLab"
+pi = "Peng Lu"
+
+[[labs]]
+id = "hku-mmlab"
+institution = "HKU"
+name = "MMLab"
+pi = "Ping Luo"
+url = "https://mmlab.hk/"
+
+[[labs]]
+id = "hku-opendrivelab"
+institution = "HKU"
+name = "OpenDriveLab"
+pi = "Hongyang Li"
+url = "https://opendrivelab.com/"
+
+[[labs]]
+id = "hkust-tan"
+institution = "HKUST"
+pi = "Ping Tan"
+
+[[labs]]
+id = "noetix"
+institution = "Noetix Robotics"
+pi = "Xiaoyu Tian"
+
+[[labs]]
+id = "phybot"
+institution = "Phybot"
+pi = "Xiaoyu Ren"
+
+[[labs]]
+id = "shlab-pang"
+institution = "Shanghai AI Lab"
+pi = "Jiangmiao Pang"
+
+[[labs]]
+id = "sjtu-gao"
+institution = "Shanghai Jiao Tong University"
+pi = "Yue Gao"
+
+[[labs]]
+id = "teleai"
+institution = "TeleAI"
+pi = "Xuelong Li"
+
+[[labs]]
+id = "tsinghua-liyi"
+institution = "Tsinghua University"
+pi = "Li Yi"
+
+[[labs]]
+id = "tsinghua-liym"
+institution = "Tsinghua University"
+pi = "Yiming Li"
+
+[[labs]]
+id = "tsinghua-zhao"
+institution = "Tsinghua University"
+pi = "Mingguo Zhao"

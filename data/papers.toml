@@ -1,0 +1,483 @@
+# One [[paper]] per work, any order (the README sorts oldest first).
+# `lab` is the last author's group (see data/labs.toml); omit it for anonymous
+# or individual work. Field reference: CONTRIBUTING.md.
+# After editing, run `uv run scripts/build.py`.
+
+# ---------------------------------------------------------------- 🏓 table tennis
+
+[[paper]]
+date = "2025.08"
+title = "HITTER: A HumanoId Table TEnnis Robot via Hierarchical Planning and Learning"
+sport = "table-tennis"
+venue = "ICRA 2026"
+robot = "Unitree G1"
+real = true
+paper = "https://arxiv.org/abs/2508.21043"
+project = "https://humanoid-table-tennis.github.io/"
+lab = "berkeley-sastry"
+
+[[paper]]
+date = "2025.09"
+title = "PACE: Physics Augmentation for Coordinated End-to-end Reinforcement Learning toward Versatile Humanoid Table Tennis"
+sport = "table-tennis"
+venue = "ICRA 2026"
+robot = "Booster T1"
+real = true
+paper = "https://arxiv.org/abs/2509.21690"
+project = "https://purdue-tracelab.github.io/ttrobot.github.io/"
+code = "https://github.com/purdue-tracelab/PACE-ICRA2026"
+lab = "purdue-trace"
+
+[[paper]]
+date = "2026.04"
+title = "SMASH: Mastering Scalable Whole-Body Skills for Humanoid Ping-Pong with Egocentric Vision"
+sport = "table-tennis"
+venue = "arXiv"
+robot = "Unitree G1"
+real = true
+paper = "https://arxiv.org/abs/2604.01158"
+project = "https://mmlab.hk/Smash/"
+lab = "hku-mmlab"
+
+[[paper]]
+date = "2026.09"
+title = "SMASH 2.0 (demo video)"
+short = "SMASH 2.0"
+sport = "table-tennis"
+status = "announced"
+robot = "Unitree G1"
+real = true
+paper = "https://www.xiaohongshu.com/discovery/item/6ab5a0a1000000000200f1c0"
+lab = "hku-mmlab"
+
+# ---------------------------------------------------------------- 🎾 tennis
+
+[[paper]]
+date = "2026.03"
+title = "Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data"
+short = "LATENT"
+sport = "tennis"
+venue = "arXiv"
+robot = "Unitree G1"
+real = true
+paper = "https://arxiv.org/abs/2603.12686"
+project = "https://zzk273.github.io/LATENT/"
+code = "https://github.com/GalaxyGeneralRobotics/LATENT"
+lab = "tsinghua-liyi"
+
+[[paper]]
+date = "2026.03"
+title = "CyboRacket: A Perception-to-Action Framework for Humanoid Racket Sports"
+sport = ["tennis", "badminton"]
+venue = "arXiv"
+robot = "Unitree G1"
+real = true
+paper = "https://arxiv.org/abs/2603.14605"
+lab = "deepcybo"
+
+[[paper]]
+date = "2026.06"
+title = "TaskNPoint: How to Teach Your Humanoid to Hit a Backhand in Minutes"
+sport = "tennis"
+venue = "arXiv"
+robot = "Unitree G1"
+real = true
+paper = "https://arxiv.org/abs/2606.26215"
+project = "https://ilonadem.github.io/tasknpoint_website/"
+code = "https://github.com/wernerb43/tasknpoint"
+lab = "caltech-amber"
+
+[[paper]]
+date = "2026.08"
+title = "Towards Professional Tennis Styles for Humanoid Robots with Adaptive Motion Planning and Tracking"
+short = "AdaPT"
+sport = "tennis"
+venue = "CoRL 2026"
+robot = "Unitree G1, Dobot Atom"
+real = true
+paper = "https://arxiv.org/abs/2608.20087"
+project = "https://humanoidtennis.github.io/AdaPT/"
+code = "https://github.com/noitom-robotics/AdaPT"
+lab = "shlab-pang"
+
+[[paper]]
+date = "2026.09"
+title = "ATHLETE: Learning Reactive Humanoid Tennis via Trajectory-Guided Motion Matching"
+sport = "tennis"
+status = "announced"
+robot = "Unitree G1"
+real = true
+paper = "https://hazintihoa.github.io/athlete.github.io/"
+code = "soon"
+
+# ---------------------------------------------------------------- 🏸 badminton
+
+[[paper]]
+date = "2025.11"
+title = "Humanoid Whole-Body Badminton via an Annealed Reinforcement Learning Curriculum"
+short = "Humanoid Whole-Body Badminton"
+sport = "badminton"
+venue = "arXiv"
+robot = "Phybot humanoid (1.28 m)"
+real = true
+paper = "https://arxiv.org/abs/2511.11218"
+project = "https://humanoid-badminton.github.io/Humanoid-Whole-Body-Badminton-via-Multi-Stage-Reinforcement-Learning/"
+lab = "phybot"
+
+[[paper]]
+date = "2026.02"
+title = "Learning Human-Like Badminton Skills for Humanoid Robots"
+short = "LHBS"
+sport = "badminton"
+venue = "arXiv"
+robot = "EngineAI PM01"
+real = true
+paper = "https://arxiv.org/abs/2602.08370"
+project = "https://astrorix.github.io/LHBS/"
+lab = "hku-arclab"
+
+[[paper]]
+date = "2026.09"
+title = "ETH humanoid badminton teaser: \"We put this on the hardware!!\""
+short = "Humanoid badminton (teaser)"
+sport = "badminton"
+status = "announced"
+real = true
+paper = "https://x.com/JayHe748646/status/2103195667342737485"
+lab = "eth-rsl"
+
+# ---------------------------------------------------------------- ⚽ soccer
+
+[[paper]]
+date = "2023.04"
+title = "Learning Agile Soccer Skills for a Bipedal Robot with Deep Reinforcement Learning"
+short = "Agile Soccer Skills (OP3)"
+sport = "soccer"
+venue = "Science Robotics 2024"
+robot = "Robotis OP3"
+real = true
+paper = "https://arxiv.org/abs/2304.13653"
+project = "https://sites.google.com/view/op3-soccer"
+lab = "deepmind-heess"
+
+[[paper]]
+date = "2023.12"
+title = "Designing a skilled soccer team for RoboCup: exploring skill-set-primitives through reinforcement learning"
+short = "Skill-Set-Primitives for RoboCup"
+sport = "soccer"
+venue = "Neural Computing and Applications 2025"
+robot = "NAO (SimSpark)"
+real = false
+paper = "https://arxiv.org/abs/2312.14360"
+code = "https://github.com/m-abr/FCPCodebase"
+lab = "aveiro-lau"
+
+[[paper]]
+date = "2024.01"
+title = "RoboCup 2023 Humanoid AdultSize Winner NimbRo: NimbRoNet3 Visual Perception and Responsive Gait with Waveform In-walk Kicks"
+short = "NimbRo (RoboCup 2023 winner)"
+sport = "soccer"
+venue = "RoboCup 2023 Symposium"
+robot = "NimbRo-OP2X"
+real = true
+paper = "https://arxiv.org/abs/2401.05909"
+lab = "bonn-ais"
+
+[[paper]]
+date = "2024.05"
+title = "Learning Robot Soccer from Egocentric Vision with Deep Reinforcement Learning"
+short = "Soccer from Egocentric Vision"
+sport = "soccer"
+venue = "CoRL 2024"
+robot = "Robotis OP3"
+real = true
+paper = "https://arxiv.org/abs/2405.02425"
+project = "https://sites.google.com/view/vision-soccer"
+lab = "deepmind-heess"
+
+[[paper]]
+date = "2024.07"
+title = "A Biomechanics-Inspired Approach to Soccer Kicking for Humanoid Robots"
+short = "Biomechanics-Inspired Kicking"
+sport = "soccer"
+venue = "arXiv"
+robot = "PresToe"
+real = false
+paper = "https://arxiv.org/abs/2407.14612"
+lab = "umass-kim"
+
+[[paper]]
+date = "2024.10"
+title = "Preferenced Oracle Guided Multi-mode Policies for Dynamic Bipedal Loco-Manipulation"
+short = "Preferenced Oracle Guided Policies"
+sport = "soccer"
+venue = "arXiv"
+robot = "HECTOR, Berkeley Humanoid, Unitree G1/H1"
+real = false
+paper = "https://arxiv.org/abs/2410.01030"
+lab = "usc-drcl"
+
+[[paper]]
+date = "2024.12"
+title = "Maximum Impulse Approach to Soccer Kicking for Humanoid Robots"
+short = "Maximum Impulse Kicking"
+sport = "soccer"
+venue = "arXiv"
+robot = "NimbRo-OP2X"
+real = true
+paper = "https://arxiv.org/abs/2412.01480"
+lab = "bonn-ais"
+
+[[paper]]
+date = "2024.12"
+title = "Reinforcement Learning Within the Classical Robotics Stack: A Case Study in Robot Soccer"
+short = "RL Within the Classical Stack"
+sport = "soccer"
+venue = "ICRA 2025"
+robot = "NAO"
+real = true
+paper = "https://arxiv.org/abs/2412.09417"
+lab = "uwmadison-hanna"
+
+[[paper]]
+date = "2025.03"
+title = "Multi-Robot Collaboration through Reinforcement Learning and Abstract Simulation"
+short = "Multi-Robot Collaboration"
+sport = "soccer"
+venue = "ICRA 2025"
+robot = "NAO"
+real = true
+paper = "https://arxiv.org/abs/2503.05092"
+lab = "uwmadison-hanna"
+
+[[paper]]
+date = "2025.04"
+title = "Model Predictive Control with Visibility Graphs for Humanoid Path Planning and Tracking Against Adversarial Opponents"
+short = "MPC with Visibility Graphs"
+sport = "soccer"
+venue = "ICRA 2025"
+robot = "ARTEMIS"
+real = true
+paper = "https://arxiv.org/abs/2504.02184"
+lab = "ucla-romela"
+
+[[paper]]
+date = "2025.04"
+title = "SoccerDiffusion: Toward Learning End-to-End Humanoid Robot Soccer from Gameplay Recordings"
+sport = "soccer"
+venue = "arXiv"
+robot = "Wolfgang-OP"
+real = true
+paper = "https://arxiv.org/abs/2504.20808"
+project = "https://bit-bots.github.io/SoccerDiffusion"
+code = "https://github.com/bit-bots/SoccerDiffusion"
+lab = "hamburg-tams"
+
+[[paper]]
+date = "2025.05"
+title = "Dribble Master: Learning Agile Humanoid Dribbling through Legged Locomotion"
+sport = "soccer"
+venue = "ICRA 2026"
+robot = "Booster T1"
+real = true
+paper = "https://arxiv.org/abs/2505.12679"
+project = "https://zhuoheng0910.github.io/dribble-master/"
+code = "https://github.com/Zhuoheng0910/DribbleMaster"
+lab = "cornell-wu"
+
+[[paper]]
+date = "2025.09"
+title = "Multi Robot Coordination in Highly Dynamic Environments: Tackling Asymmetric Obstacles and Limited Communication"
+short = "Multi Robot Coordination"
+sport = "soccer"
+venue = "IAS-19 2025"
+robot = "NAO"
+real = true
+paper = "https://arxiv.org/abs/2509.08859"
+lab = "sapienza-nardi"
+
+[[paper]]
+date = "2025.10"
+title = "Like Playing a Video Game: Spatial-Temporal Optimization of Foot Trajectories for Controlled Football Kicking in Bipedal Robots"
+short = "STOFT"
+sport = "soccer"
+venue = "IROS 2025"
+robot = "PEARL biped"
+real = true
+paper = "https://arxiv.org/abs/2510.01843"
+project = "https://arclab-hku.github.io/STOFT/"
+lab = "hku-arclab"
+
+[[paper]]
+date = "2025.10"
+title = "Humanoid Goalkeeper: Learning from Position Conditioned Task-Motion Constraints"
+sport = "soccer"
+venue = "arXiv"
+robot = "Unitree G1"
+real = true
+paper = "https://arxiv.org/abs/2510.18002"
+project = "https://humanoid-goalkeeper.github.io/Goalkeeper/"
+code = "https://github.com/InternRobotics/Humanoid-Goalkeeper"
+lab = "shlab-pang"
+
+[[paper]]
+date = "2025.11"
+title = "Learning Vision-Driven Reactive Soccer Skills for Humanoid Robots"
+short = "Vision-Driven Reactive Soccer"
+sport = "soccer"
+venue = "Science Robotics 2026"
+robot = "Booster T1"
+real = true
+paper = "https://arxiv.org/abs/2511.03996"
+project = "https://humanoid-kick.github.io"
+code = "https://zenodo.org/records/21620490"
+lab = "tsinghua-zhao"
+
+[[paper]]
+date = "2025.12"
+title = "Learning Agile Striker Skills for Humanoid Soccer Robots from Noisy Sensory Input"
+short = "Agile Striker Skills"
+sport = "soccer"
+venue = "ICRA 2026"
+robot = "Booster T1"
+real = true
+paper = "https://arxiv.org/abs/2512.06571"
+project = "https://humanoidsoccer.github.io"
+code = "https://github.com/Daffan/humanoid-soccer"
+lab = "utaustin-larg"
+
+[[paper]]
+date = "2025.12"
+title = "A Hierarchical, Model-Based System for High-Performance Humanoid Soccer"
+short = "Model-Based Humanoid Soccer"
+sport = "soccer"
+venue = "arXiv"
+robot = "ARTEMIS"
+real = true
+paper = "https://arxiv.org/abs/2512.09431"
+lab = "ucla-romela"
+
+[[paper]]
+date = "2026.02"
+title = "Learning Soccer Skills for Humanoid Robots: A Progressive Perception-Action Framework"
+sport = "soccer"
+venue = "arXiv"
+robot = "Unitree G1"
+real = true
+paper = "https://arxiv.org/abs/2602.05310"
+project = "https://soccer-humanoid.github.io/"
+code = "https://github.com/TeleHuman/HumanoidSoccer"
+lab = "teleai"
+
+[[paper]]
+date = "2026.03"
+title = "HierKick: Hierarchical Reinforcement Learning for Vision-Guided Soccer Robot Control"
+sport = "soccer"
+venue = "arXiv"
+robot = "Booster T1"
+real = true
+paper = "https://arxiv.org/abs/2603.00948"
+lab = "sjtu-gao"
+
+[[paper]]
+date = "2026.06"
+title = "RoboNaldo: Accurate, Stable and Powerful Humanoid Soccer Shooting via Motion-Guided Curriculum Reinforcement Learning"
+sport = "soccer"
+venue = "CoRL 2026"
+robot = "Unitree G1"
+real = true
+paper = "https://arxiv.org/abs/2606.11092"
+project = "https://opendrivelab.com/RoboNaldo"
+code = "https://github.com/OpenDriveLab/RoboNaldo"
+lab = "hku-opendrivelab"
+
+[[paper]]
+date = "2026.07"
+title = "Vision-Based Dribbling for Humanoid Soccer via Privileged Representation Learning"
+short = "Vision-Based Dribbling"
+sport = "soccer"
+venue = "arXiv"
+robot = "Booster T1"
+real = false
+paper = "https://arxiv.org/abs/2607.12702"
+project = "https://lab-rococo-sapienza.github.io/learning-to-dribble/"
+code = "soon"
+lab = "sapienza-iocchi"
+
+[[paper]]
+date = "2026.09"
+title = "SkillX: Unified Multi-Skill Policy Learning for Humanoid Soccer"
+sport = "soccer"
+venue = "CoRL 2026"
+robot = "Noetix E1"
+real = true
+paper = "https://arxiv.org/abs/2609.06718"
+project = "https://yzc0731.github.io/SkillX/"
+lab = "noetix"
+
+[[paper]]
+date = "2026.09"
+title = "Dynamics-Induced Commitment in Learning-Based Robotic Penalty Kicks"
+short = "Robotic Penalty Kicks"
+sport = "soccer"
+venue = "arXiv"
+robot = "Unitree G1 (vs. Go2 keeper)"
+real = true
+paper = "https://arxiv.org/abs/2609.21100"
+lab = "cmu-safeai"
+
+[[paper]]
+date = "2026.09"
+title = "Joga: a full-stack humanoid soccer system with active vision"
+short = "Joga"
+sport = "soccer"
+status = "announced"
+robot = "Unitree G1 + actuated neck"
+real = true
+paper = "https://x.com/nolan_fey/status/2102664694704042152"
+lab = "mit-improbable"
+
+[[paper]]
+date = "2026.09"
+title = "Physical Self-Play"
+sport = "soccer"
+venue = "Blog"
+robot = "Full-size humanoid"
+real = true
+paper = "https://www.skild.ai/blogs/physical-self-play"
+lab = "skild"
+
+[[paper]]
+date = "2026.09"
+title = "Banana Kick: Response-Informed Skill Evolution for Humanoid Soccer"
+sport = "soccer"
+venue = "arXiv"
+robot = "Unitree G1"
+real = true
+paper = "https://arxiv.org/abs/2609.27269"
+lab = "cmu-safeai"
+
+[[paper]]
+date = "2026.09"
+title = "DAVIS: A Depth-Only End-to-End Active-Vision Framework for Humanoid Soccer Skills"
+sport = "soccer"
+venue = "arXiv"
+robot = "Noetix E1"
+real = true
+paper = "https://arxiv.org/abs/2609.28175"
+project = "https://thusi-lab.github.io/DAVIS/"
+lab = "tsinghua-liym"
+
+# ---------------------------------------------------------------- 🏀 basketball
+
+[[paper]]
+date = "2026.02"
+title = "HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos"
+sport = ["basketball", "soccer"]
+venue = "arXiv"
+robot = "Unitree G1"
+real = true
+paper = "https://arxiv.org/abs/2602.02473"
+project = "https://wyhuai.github.io/human-x/"
+code = "soon"
+lab = "hkust-tan"
