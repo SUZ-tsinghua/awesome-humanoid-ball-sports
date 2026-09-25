@@ -1,6 +1,6 @@
 # Awesome Humanoid Ball Sports [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-As robot learning leans more and more toward scaling, it can seem like there is less and less left for academic labs to do. I believe humanoid ball sports is a topic especially well suited to academia: it doesn't need huge amounts of compute or data, but it does take a lot of effort and ingenuity. I made this list to make literature review in this area easier for everyone.
+As robot learning leans more and more toward scaling, it can seem like there is less and less left for academic labs to do. I believe humanoid ball sports is a topic especially well suited to academia: it doesn't need huge amounts of compute or data, but it does take a lot of effort and ingenuity. So I made this list to make literature review in this area easier for everyone.
 
 It collects research on humanoid robots playing **table tennis, tennis, badminton, soccer and basketball**, plus a map of which groups work on which sport.
 
