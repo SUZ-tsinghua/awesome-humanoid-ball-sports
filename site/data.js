@@ -563,7 +563,8 @@ window.MAP_DATA = {
       }
      ]
     }
-   ]
+   ],
+   "logo": "logos/sjtu.png"
   },
   {
    "name": "Skild AI",

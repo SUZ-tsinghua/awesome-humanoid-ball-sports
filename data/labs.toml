@@ -126,6 +126,7 @@ lat = 31.1790
 lon = 121.4600
 
 [institutions."Shanghai Jiao Tong University"]
+logo = "sjtu.png"
 lat = 31.0252
 lon = 121.4337
 
