@@ -659,6 +659,25 @@ window.MAP_DATA = {
    "lon": -122.2585,
    "groups": [
     {
+     "name": "Hybrid Robotics",
+     "pi": "Koushil Sreenath",
+     "url": "https://hybrid-robotics.berkeley.edu/",
+     "works": [
+      {
+       "title": "Sustained humanoid dribbling through slaloms and sharp turns, with onboard LiDAR ball perception",
+       "short": "Humanoid slalom dribbling",
+       "date": "2026.09",
+       "sports": [
+        "soccer"
+       ],
+       "announced": true,
+       "real": true,
+       "robot": "Unitree G1",
+       "paper": "https://x.com/ChuyeHong/status/2102784078831292442"
+      }
+     ]
+    },
+    {
      "pi": "S. Shankar Sastry",
      "works": [
       {

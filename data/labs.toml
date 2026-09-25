@@ -162,6 +162,13 @@ id = "skild"
 institution = "Skild AI"
 
 [[labs]]
+id = "berkeley-hybrid"
+institution = "UC Berkeley"
+name = "Hybrid Robotics"
+pi = "Koushil Sreenath"
+url = "https://hybrid-robotics.berkeley.edu/"
+
+[[labs]]
 id = "berkeley-sastry"
 institution = "UC Berkeley"
 pi = "S. Shankar Sastry"

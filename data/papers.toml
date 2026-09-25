@@ -328,6 +328,17 @@ lab = "cmu-safeai"
 
 [[paper]]
 date = "2026.09"
+title = "Sustained humanoid dribbling through slaloms and sharp turns, with onboard LiDAR ball perception"
+short = "Humanoid slalom dribbling"
+sport = "soccer"
+status = "announced"
+robot = "Unitree G1"
+real = true
+paper = "https://x.com/ChuyeHong/status/2102784078831292442"
+lab = "berkeley-hybrid"
+
+[[paper]]
+date = "2026.09"
 title = "Joga: a full-stack humanoid soccer system with active vision"
 short = "Joga"
 sport = "soccer"

@@ -7,7 +7,7 @@
 This list collects research on humanoid robots playing **table tennis 🏓, tennis 🎾, badminton 🏸, soccer ⚽ and basketball 🏀**, plus a map of which groups work on which sport.
 
 <!-- gen:stats -->
-**32** works · **27** groups · **23** institutions
+**33** works · **28** groups · **23** institutions
 <!-- /gen -->
 
 Each entry lists when it first appeared, where it was published (📣 = public demo, no paper yet), which robot it uses, whether it was shown on real hardware (✅ real robot, 🖥️ simulation only), and links to its project page and code.
@@ -89,6 +89,7 @@ Each entry lists when it first appeared, where it was published (📣 = public d
 | 2026.09 | [Joga: a full-stack humanoid soccer system with active vision](https://x.com/nolan_fey/status/2102664694704042152) | 📣 Announced | Unitree G1 + actuated neck | ✅ | Pulkit Agrawal, MIT | — |
 | 2026.09 | [Physical Self-Play](https://www.skild.ai/blogs/physical-self-play) | Blog | Full-size humanoid | ✅ | Skild AI | — |
 | 2026.09 | [SkillX: Unified Multi-Skill Policy Learning for Humanoid Soccer](https://arxiv.org/abs/2609.06718) | CoRL 2026 | Noetix E1 | ✅ | Xiaoyu Tian, Noetix Robotics | [project](https://yzc0731.github.io/SkillX/) |
+| 2026.09 | [Sustained humanoid dribbling through slaloms and sharp turns, with onboard LiDAR ball perception](https://x.com/ChuyeHong/status/2102784078831292442) | 📣 Announced | Unitree G1 | ✅ | Koushil Sreenath, UC Berkeley | — |
 <!-- /gen -->
 
 ## 🏀 Basketball
