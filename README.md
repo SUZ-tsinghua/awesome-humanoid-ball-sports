@@ -7,7 +7,7 @@
 This list collects research on humanoid robots playing **table tennis 🏓, tennis 🎾, badminton 🏸, soccer ⚽ and basketball 🏀**, plus a map of which groups work on which sport.
 
 <!-- gen:stats -->
-**33** works · **28** groups · **23** institutions
+**34** works · **29** groups · **24** institutions
 <!-- /gen -->
 
 Each entry lists when it first appeared, where it was published (📣 = public demo, no paper yet), which robot it uses, whether it was shown on real hardware (✅ real robot, 🖥️ simulation only), and links to its project page and code.
@@ -62,6 +62,7 @@ Each entry lists when it first appeared, where it was published (📣 = public d
 | 2026.02 | [Learning Human-Like Badminton Skills for Humanoid Robots](https://arxiv.org/abs/2602.08370) | arXiv | EngineAI PM01 | ✅ | Peng Lu, HKU | [project](https://astrorix.github.io/LHBS/) |
 | 2026.03 | [CyboRacket: A Perception-to-Action Framework for Humanoid Racket Sports](https://arxiv.org/abs/2603.14605) | arXiv | Unitree G1 | ✅ | Kai Chen, DeepCybo | — |
 | 2026.09 | [ETH humanoid badminton teaser: "We put this on the hardware!!"](https://x.com/JayHe748646/status/2103195667342737485) | 📣 Announced | — | ✅ | Marco Hutter, ETH Zurich | — |
+| 2026.09 | [Humanoid Badminton: Learning Dynamic Racket Skills from Limited Human Motion Data](https://arxiv.org/abs/2609.31840) | CoRL 2026 | Unitree G1 | ✅ | Zhongyu Li, CUHK | [project](https://sunlight02.github.io/humanoid-badminton/) |
 <!-- /gen -->
 
 ## ⚽ Soccer

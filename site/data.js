@@ -24,6 +24,32 @@ window.MAP_DATA = {
  },
  "institutions": [
   {
+   "name": "CUHK",
+   "lat": 22.4196,
+   "lon": 114.2068,
+   "groups": [
+    {
+     "pi": "Zhongyu Li",
+     "works": [
+      {
+       "title": "Humanoid Badminton: Learning Dynamic Racket Skills from Limited Human Motion Data",
+       "short": "Humanoid Badminton",
+       "date": "2026.09",
+       "sports": [
+        "badminton"
+       ],
+       "venue": "CoRL 2026",
+       "announced": false,
+       "real": true,
+       "robot": "Unitree G1",
+       "paper": "https://arxiv.org/abs/2609.31840",
+       "project": "https://sunlight02.github.io/humanoid-badminton/"
+      }
+     ]
+    }
+   ]
+  },
+  {
    "name": "Caltech",
    "lat": 34.1377,
    "lon": -118.1253,

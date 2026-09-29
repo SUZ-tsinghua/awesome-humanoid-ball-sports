@@ -138,6 +138,18 @@ lab = "hku-arclab"
 
 [[paper]]
 date = "2026.09"
+title = "Humanoid Badminton: Learning Dynamic Racket Skills from Limited Human Motion Data"
+short = "Humanoid Badminton"
+sport = "badminton"
+venue = "CoRL 2026"
+robot = "Unitree G1"
+real = true
+paper = "https://arxiv.org/abs/2609.31840"
+project = "https://sunlight02.github.io/humanoid-badminton/"
+lab = "cuhk-lizy"
+
+[[paper]]
+date = "2026.09"
 title = "ETH humanoid badminton teaser: \"We put this on the hardware!!\""
 short = "Humanoid badminton (teaser)"
 sport = "badminton"
