@@ -24,6 +24,32 @@ window.MAP_DATA = {
  },
  "institutions": [
   {
+   "name": "Archon Robotics",
+   "lat": 31.2304,
+   "lon": 121.4737,
+   "groups": [
+    {
+     "pi": "Li Chen",
+     "works": [
+      {
+       "title": "PingpongDuo: Agile Humanoid Table Tennis Doubles with Safe Team Coordination",
+       "short": "PingpongDuo",
+       "date": "2026.10",
+       "sports": [
+        "table-tennis"
+       ],
+       "venue": "arXiv",
+       "announced": false,
+       "real": true,
+       "robot": "Unitree G1 (x2)",
+       "paper": "https://arxiv.org/abs/2610.20579",
+       "project": "https://www.archon.tech/research/PingpongDuo"
+      }
+     ]
+    }
+   ]
+  },
+  {
    "name": "CUHK",
    "lat": 22.4196,
    "lon": 114.2068,
@@ -351,6 +377,58 @@ window.MAP_DATA = {
     }
    ],
    "logo": "logos/hkust.png"
+  },
+  {
+   "name": "HKUST (Guangzhou)",
+   "lat": 22.8935,
+   "lon": 113.4785,
+   "groups": [
+    {
+     "pi": "Junwei Liang",
+     "works": [
+      {
+       "title": "ATHLETE: Learning Reactive Humanoid Tennis via Trajectory-Guided Motion Matching",
+       "short": "ATHLETE",
+       "date": "2026.09",
+       "sports": [
+        "tennis"
+       ],
+       "venue": "arXiv",
+       "announced": false,
+       "real": true,
+       "robot": "Unitree G1",
+       "paper": "https://arxiv.org/abs/2610.13572",
+       "project": "https://hazintihoa.github.io/athlete.github.io/",
+       "code": "soon"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "KAIST",
+   "lat": 36.3721,
+   "lon": 127.3604,
+   "groups": [
+    {
+     "pi": "Chang D. Yoo",
+     "works": [
+      {
+       "title": "Locomotion-Grounded Humanoid Soccer: Task-Gated Reinforcement Learning of a Multi-Directional Kicking Library",
+       "short": "Locomotion-Grounded Humanoid Soccer",
+       "date": "2026.09",
+       "sports": [
+        "soccer"
+       ],
+       "venue": "arXiv",
+       "announced": false,
+       "real": true,
+       "robot": "Unitree G1",
+       "paper": "https://arxiv.org/abs/2609.38852"
+      }
+     ]
+    }
+   ]
   },
   {
    "name": "MIT",
@@ -836,6 +914,32 @@ window.MAP_DATA = {
     }
    ],
    "logo": "logos/hamburg.png"
+  },
+  {
+   "name": "Zhejiang University",
+   "lat": 30.301,
+   "lon": 120.087,
+   "groups": [
+    {
+     "pi": "Rongrong Wang",
+     "works": [
+      {
+       "title": "From Hitter to Player: Separating Motor Execution and Strategy in Competitive Humanoid Table Tennis",
+       "short": "From Hitter to Player",
+       "date": "2026.10",
+       "sports": [
+        "table-tennis"
+       ],
+       "venue": "arXiv",
+       "announced": false,
+       "real": true,
+       "robot": "Unitree G1",
+       "paper": "https://arxiv.org/abs/2610.14067",
+       "project": "https://mufanmufan.github.io/hitter-to-player/"
+      }
+     ]
+    }
+   ]
   }
  ]
 };

@@ -7,7 +7,7 @@
 This list collects research on humanoid robots playing **table tennis 🏓, tennis 🎾, badminton 🏸, soccer ⚽ and basketball 🏀**, plus a map of which groups work on which sport.
 
 <!-- gen:stats -->
-**34** works · **29** groups · **24** institutions
+**37** works · **33** groups · **28** institutions
 <!-- /gen -->
 
 Each entry lists when it first appeared, where it was published (📣 = public demo, no paper yet), which robot it uses, whether it was shown on real hardware (✅ real robot, 🖥️ simulation only), and links to its project page and code.
@@ -39,6 +39,8 @@ Each entry lists when it first appeared, where it was published (📣 = public d
 | 2025.09 | [PACE: Physics Augmentation for Coordinated End-to-end Reinforcement Learning toward Versatile Humanoid Table Tennis](https://arxiv.org/abs/2509.21690) | ICRA 2026 | Booster T1 | ✅ | Yan Gu, Purdue University | [project](https://purdue-tracelab.github.io/ttrobot.github.io/) · [code](https://github.com/purdue-tracelab/PACE-ICRA2026) |
 | 2026.04 | [SMASH: Mastering Scalable Whole-Body Skills for Humanoid Ping-Pong with Egocentric Vision](https://arxiv.org/abs/2604.01158) | arXiv | Unitree G1 | ✅ | Ping Luo, HKU | [project](https://mmlab.hk/Smash/) |
 | 2026.09 | [SMASH 2.0 (demo video)](https://www.xiaohongshu.com/discovery/item/6ab5a0a1000000000200f1c0) | 📣 Announced | Unitree G1 | ✅ | Ping Luo, HKU | — |
+| 2026.10 | [From Hitter to Player: Separating Motor Execution and Strategy in Competitive Humanoid Table Tennis](https://arxiv.org/abs/2610.14067) | arXiv | Unitree G1 | ✅ | Rongrong Wang, Zhejiang University | [project](https://mufanmufan.github.io/hitter-to-player/) |
+| 2026.10 | [PingpongDuo: Agile Humanoid Table Tennis Doubles with Safe Team Coordination](https://arxiv.org/abs/2610.20579) | arXiv | Unitree G1 (x2) | ✅ | Li Chen, Archon Robotics | [project](https://www.archon.tech/research/PingpongDuo) |
 <!-- /gen -->
 
 ## 🎾 Tennis
@@ -50,7 +52,7 @@ Each entry lists when it first appeared, where it was published (📣 = public d
 | 2026.03 | [Learning Athletic Humanoid Tennis Skills from Imperfect Human Motion Data](https://arxiv.org/abs/2603.12686) | arXiv | Unitree G1 | ✅ | Li Yi, Tsinghua University | [project](https://zzk273.github.io/LATENT/) · [code](https://github.com/GalaxyGeneralRobotics/LATENT) |
 | 2026.06 | [TaskNPoint: How to Teach Your Humanoid to Hit a Backhand in Minutes](https://arxiv.org/abs/2606.26215) | arXiv | Unitree G1 | ✅ | Aaron D. Ames, Caltech | [project](https://ilonadem.github.io/tasknpoint_website/) · [code](https://github.com/wernerb43/tasknpoint) |
 | 2026.08 | [Towards Professional Tennis Styles for Humanoid Robots with Adaptive Motion Planning and Tracking](https://arxiv.org/abs/2608.20087) | CoRL 2026 | Unitree G1, Dobot Atom | ✅ | Jiangmiao Pang, Shanghai AI Lab | [project](https://humanoidtennis.github.io/AdaPT/) · [code](https://github.com/noitom-robotics/AdaPT) |
-| 2026.09 | [ATHLETE: Learning Reactive Humanoid Tennis via Trajectory-Guided Motion Matching](https://hazintihoa.github.io/athlete.github.io/) | 📣 Announced | Unitree G1 | ✅ | — | code (soon) |
+| 2026.09 | [ATHLETE: Learning Reactive Humanoid Tennis via Trajectory-Guided Motion Matching](https://arxiv.org/abs/2610.13572) | arXiv | Unitree G1 | ✅ | Junwei Liang, HKUST (Guangzhou) | [project](https://hazintihoa.github.io/athlete.github.io/) · code (soon) |
 <!-- /gen -->
 
 ## 🏸 Badminton
@@ -88,6 +90,7 @@ Each entry lists when it first appeared, where it was published (📣 = public d
 | 2026.09 | [DAVIS: A Depth-Only End-to-End Active-Vision Framework for Humanoid Soccer Skills](https://arxiv.org/abs/2609.28175) | arXiv | Noetix E1 | ✅ | Yiming Li, Tsinghua University | [project](https://thusi-lab.github.io/DAVIS/) |
 | 2026.09 | [Dynamics-Induced Commitment in Learning-Based Robotic Penalty Kicks](https://arxiv.org/abs/2609.21100) | arXiv | Unitree G1 (vs. Go2 keeper) | ✅ | Ding Zhao, Carnegie Mellon University | — |
 | 2026.09 | [Joga: a full-stack humanoid soccer system with active vision](https://x.com/nolan_fey/status/2102664694704042152) | 📣 Announced | Unitree G1 + actuated neck | ✅ | Pulkit Agrawal, MIT | — |
+| 2026.09 | [Locomotion-Grounded Humanoid Soccer: Task-Gated Reinforcement Learning of a Multi-Directional Kicking Library](https://arxiv.org/abs/2609.38852) | arXiv | Unitree G1 | ✅ | Chang D. Yoo, KAIST | — |
 | 2026.09 | [Physical Self-Play](https://www.skild.ai/blogs/physical-self-play) | Blog | Full-size humanoid | ✅ | Skild AI | — |
 | 2026.09 | [SkillX: Unified Multi-Skill Policy Learning for Humanoid Soccer](https://arxiv.org/abs/2609.06718) | CoRL 2026 | Noetix E1 | ✅ | Xiaoyu Tian, Noetix Robotics | [project](https://yzc0731.github.io/SkillX/) |
 | 2026.09 | [Sustained humanoid dribbling through slaloms and sharp turns, with onboard LiDAR ball perception](https://x.com/ChuyeHong/status/2102784078831292442) | 📣 Announced | Unitree G1 | ✅ | Koushil Sreenath, UC Berkeley | — |

@@ -50,6 +50,28 @@ real = true
 paper = "https://www.xiaohongshu.com/discovery/item/6ab5a0a1000000000200f1c0"
 lab = "hku-mmlab"
 
+[[paper]]
+date = "2026.10"
+title = "From Hitter to Player: Separating Motor Execution and Strategy in Competitive Humanoid Table Tennis"
+sport = "table-tennis"
+venue = "arXiv"
+robot = "Unitree G1"
+real = true
+paper = "https://arxiv.org/abs/2610.14067"
+project = "https://mufanmufan.github.io/hitter-to-player/"
+lab = "zju-wang"
+
+[[paper]]
+date = "2026.10"
+title = "PingpongDuo: Agile Humanoid Table Tennis Doubles with Safe Team Coordination"
+sport = "table-tennis"
+venue = "arXiv"
+robot = "Unitree G1 (x2)"
+real = true
+paper = "https://arxiv.org/abs/2610.20579"
+project = "https://www.archon.tech/research/PingpongDuo"
+lab = "archon"
+
 # ---------------------------------------------------------------- 🎾 tennis
 
 [[paper]]
@@ -104,11 +126,13 @@ lab = "shlab-pang"
 date = "2026.09"
 title = "ATHLETE: Learning Reactive Humanoid Tennis via Trajectory-Guided Motion Matching"
 sport = "tennis"
-status = "announced"
+venue = "arXiv"
 robot = "Unitree G1"
 real = true
-paper = "https://hazintihoa.github.io/athlete.github.io/"
+paper = "https://arxiv.org/abs/2610.13572"
+project = "https://hazintihoa.github.io/athlete.github.io/"
 code = "soon"
+lab = "hkustgz-liang"
 
 # ---------------------------------------------------------------- 🏸 badminton
 
@@ -390,6 +414,16 @@ real = true
 paper = "https://arxiv.org/abs/2609.28175"
 project = "https://thusi-lab.github.io/DAVIS/"
 lab = "tsinghua-liym"
+
+[[paper]]
+date = "2026.09"
+title = "Locomotion-Grounded Humanoid Soccer: Task-Gated Reinforcement Learning of a Multi-Directional Kicking Library"
+sport = "soccer"
+venue = "arXiv"
+robot = "Unitree G1"
+real = true
+paper = "https://arxiv.org/abs/2609.38852"
+lab = "kaist-yoo"
 
 # ---------------------------------------------------------------- 🏀 basketball
 
